@@ -1,0 +1,146 @@
+/* Your custom blog styles here */
+
+.light-switch-sun,
+.light-switch-moon,
+.search-toggle {
+    @apply text-gray-500;
+    @apply dark:text-neutral-200;
+    @apply hover:text-primary-500;
+    @apply cursor-pointer;
+    @apply hover:transition-none;
+    @apply transition-colors duration-200;
+}
+
+.heading-permalink {
+    @apply invisible;
+    @apply font-sans;
+    @apply font-semibold;
+    @apply align-text-top;
+    @apply ml-3;
+    @apply text-xl;
+    @apply hover:text-primary-500;
+    @apply text-primary-500/60;
+}
+
+h1:hover .heading-permalink,
+h2:hover .heading-permalink,
+h3:hover .heading-permalink,
+h4:hover .heading-permalink,
+h5:hover .heading-permalink,
+h6:hover .heading-permalink
+{
+    @apply visible;
+}
+
+.category {
+    @apply text-gray-500;
+    @apply bg-gray-300;
+
+    &-primary {
+        @apply text-primary-800;
+        @apply bg-primary-300;
+        @apply hover:bg-primary-400;
+    }
+
+    &-red {
+        @apply text-red-800;
+        @apply bg-red-300;
+        @apply hover:bg-red-400;
+    }
+
+    &-orange {
+        @apply text-orange-800;
+        @apply bg-orange-300;
+        @apply hover:bg-orange-400;
+    }
+
+    &-amber {
+        @apply text-amber-800;
+        @apply bg-amber-300;
+        @apply hover:bg-amber-400;
+    }
+
+    &-yellow {
+        @apply text-yellow-800;
+        @apply bg-yellow-300;
+        @apply hover:bg-yellow-400;
+    }
+
+    &-lime {
+        @apply text-lime-800;
+        @apply bg-lime-300;
+        @apply hover:bg-lime-400;
+    }
+
+    &-green {
+        @apply text-green-800;
+        @apply bg-green-300;
+        @apply hover:bg-green-400;
+    }
+
+    &-emerald {
+        @apply text-emerald-800;
+        @apply bg-emerald-300;
+        @apply hover:bg-emerald-400;
+    }
+
+    &-teal {
+        @apply text-teal-800;
+        @apply bg-teal-300;
+        @apply hover:bg-teal-400;
+    }
+
+    &-cyan {
+        @apply text-cyan-800;
+        @apply bg-cyan-300;
+        @apply hover:bg-cyan-400;
+    }
+
+    &-sky {
+        @apply text-sky-800;
+        @apply bg-sky-300;
+        @apply hover:bg-sky-400;
+    }
+
+    &-blue {
+        @apply text-blue-800;
+        @apply bg-blue-300;
+        @apply hover:bg-blue-400;
+    }
+
+    &-indigo {
+        @apply text-indigo-800;
+        @apply bg-indigo-300;
+        @apply hover:bg-indigo-400;
+    }
+
+    &-violet {
+        @apply text-violet-800;
+        @apply bg-violet-300;
+        @apply hover:bg-violet-400;
+    }
+
+    &-purple {
+        @apply text-purple-800;
+        @apply bg-purple-300;
+        @apply hover:bg-purple-400;
+    }
+
+    &-fuchsia {
+        @apply text-fuchsia-800;
+        @apply bg-fuchsia-300;
+        @apply hover:bg-fuchsia-400;
+    }
+
+    &-pink {
+        @apply text-pink-800;
+        @apply bg-pink-300;
+        @apply hover:bg-pink-400;
+    }
+
+    &-rose {
+        @apply text-rose-800;
+        @apply bg-rose-300;
+        @apply hover:bg-rose-400;
+    }
+}

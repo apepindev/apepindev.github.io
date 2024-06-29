@@ -1,0 +1,217 @@
+body {
+    font-size: 17px;
+    @apply bg-gray-100;
+    @apply dark:bg-neutral-800;
+    @apply text-gray-700;
+    @apply dark:text-neutral-300;
+    @apply transition-colors duration-200;
+}
+
+header {
+    .site-title {
+        @apply text-lg;
+        @apply md:text-2xl;
+        @apply font-light;
+        @apply uppercase;
+        @apply font-sans;
+
+        span {
+            @apply font-bold;
+            @apply dark:text-neutral-600;
+            @apply text-gray-300;
+            @apply tracking-widest;
+            @apply transition-colors duration-200;
+        }
+    }
+}
+
+nav {
+    a {
+        @apply uppercase;
+        @apply font-semibold;
+        @apply text-gray-500;
+        @apply dark:text-neutral-200;
+        @apply hover:text-primary-500;
+        @apply hover:transition-none;
+        @apply transition-colors duration-200;
+
+        &.active {
+            @apply text-primary-600;
+        }
+    }
+}
+
+a {
+    @apply no-underline;
+    @apply text-primary-500;
+}
+
+blockquote {
+    @apply pl-6;
+    @apply my-8;
+    @apply text-lg;
+    @apply font-light;
+    @apply italic;
+    @apply border-l-4;
+    @apply border-primary-400;
+    @apply text-gray-400;
+    @apply dark:text-neutral-400;
+
+    code {
+        @apply text-gray-500;
+        @apply dark:text-neutral-400;
+    }
+}
+
+code {
+    @apply px-2;
+    @apply py-px;
+    @apply text-sm;
+    @apply bg-gray-200;
+    @apply dark:bg-neutral-900;
+    @apply text-gray-700;
+    @apply dark:text-neutral-200;
+    @apply rounded;
+    @apply transition-colors duration-200;
+}
+
+code.hljs {
+    @apply p-0;
+    @apply bg-transparent;
+
+    & .hljs-comment,
+    & .hljs-keyword,
+    & .hljs-meta {
+        @apply font-normal;
+        @apply not-italic;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply mt-8;
+    @apply mb-4;
+    @apply leading-tight;
+
+    &:first-child {
+        @apply mt-0;
+    }
+}
+
+h1 {
+    @apply text-5xl;
+    @apply font-bold;
+    @apply uppercase;
+}
+
+h2 {
+    @apply text-4xl;
+    @apply font-bold;
+    @apply uppercase;
+}
+
+h3 {
+    @apply text-3xl;
+    @apply font-bold;
+    @apply uppercase;
+}
+
+h4 {
+    @apply text-2xl;
+    @apply font-normal;
+    @apply uppercase;
+}
+
+h5 {
+    @apply text-xl;
+    @apply font-normal;
+    @apply uppercase;
+}
+
+h6 {
+    @apply text-lg;
+    @apply font-light;
+    @apply font-serif;
+}
+
+hr {
+    @apply my-12;
+    @apply border-b;
+    @apply border-gray-200;
+    @apply dark:border-neutral-700;
+    @apply rounded-full;
+    @apply transition-colors duration-200;
+}
+
+li {
+    @apply ml-6;
+    & ul,
+    & ol {
+        @apply ml-2;
+        @apply my-0;
+    }
+}
+
+ol,
+ul {
+    @apply my-4;
+    @apply font-serif;
+    @apply font-light;
+    @apply marker:text-primary-400;
+}
+
+ol {
+    @apply list-decimal;
+}
+
+ul {
+    @apply list-disc;
+}
+
+p {
+    @apply my-3;
+    @apply font-serif;
+    @apply font-light;
+
+    @screen md {
+        @apply my-6;
+    }
+}
+
+pre {
+    @apply p-4;
+    @apply my-6;
+    @apply text-base;
+    @apply bg-neutral-900;
+    @apply leading-loose;
+    @apply rounded;
+    @apply shadow;
+    @apply overflow-x-auto;
+
+    ::selection {
+        @apply text-neutral-300;
+        @apply bg-neutral-700;
+    }
+
+    & code {
+        @apply block;
+        @apply p-0;
+        @apply bg-transparent;
+    }
+}
+
+::selection {
+    @apply text-white;
+    @apply bg-primary-500/60;
+}
+
+img + em {
+    @apply font-sans;
+    @apply text-xs;
+    @apply text-gray-500;
+    @apply dark:text-neutral-400;
+}
