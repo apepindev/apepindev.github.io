@@ -2,6 +2,7 @@
 
 @push('scripts')
 <script>
+document.addEventListener('DOMContentLoaded', function () {
     function getGiscusTheme() {
         const theme = localStorage.getItem('dark-mode') === 'true' ? 'dark' : 'light';
         return theme === 'dark' ? 'noborder_dark' : 'noborder_light';
@@ -11,8 +12,9 @@
         function sendMessage(message) {
             const iframe = document.querySelector('iframe.giscus-frame');
             if (!iframe) return;
-            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+            iframe.contentWindow.postMessage({giscus: message}, 'https://giscus.app');
         }
+
         sendMessage({
             setConfig: {
                 theme: getGiscusTheme(),
@@ -27,14 +29,14 @@
         "data-category": "Post comments",
         "data-category-id": "DIC_kwDOMPuhdM4CgeLA",
         "data-mapping": "og:title",
-        "data-strict": "0",
+        "data-strict": "1",
         "data-reactions-enabled": "1",
         "data-emit-metadata": "0",
         "data-input-position": "top",
         "data-theme": getGiscusTheme(),
         "data-lang": "en",
         "crossorigin": "anonymous",
-        "data-loading": "lazy",
+        // "data-loading": "lazy",
         "async": "",
     };
 
@@ -47,5 +49,6 @@
 
     // Update giscus theme when theme switcher is clicked
     document.addEventListener('light-switched', setGiscusTheme);
+});
 </script>
 @endpush

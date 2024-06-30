@@ -8,7 +8,7 @@
     About
 </a>
 
-<a title="{{ $page->siteName }} Contact" href="/contact"
-   class="lg:ml-6 {{ $page->isActive('/contact/') ? 'active' : '' }}">
-    Contact
-</a>
+{{--<a title="{{ $page->siteName }} Contact" href="/contact"--}}
+{{--   class="lg:ml-6 {{ $page->isActive('/contact/') ? 'active' : '' }}">--}}
+{{--    Contact--}}
+{{--</a>--}}
