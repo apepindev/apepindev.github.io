@@ -41,4 +41,6 @@
             @endif
         </div>
     </nav>
+
+    @include('_components.comment-thread')
 @endsection

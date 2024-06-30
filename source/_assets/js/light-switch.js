@@ -6,7 +6,10 @@ if (lightSwitches.length > 0) {
             lightSwitch.checked = true;
         }
 
+        let lightSwitchedEvent = new Event('light-switched')
+
         lightSwitch.addEventListener('change', () => {
+
             const { checked } = lightSwitch;
 
             lightSwitches.forEach((el, n) => {
@@ -19,13 +22,15 @@ if (lightSwitches.length > 0) {
                 document.documentElement.classList.add('dark');
                 document.querySelectorAll('.light-switch-sun').forEach(el => el.classList.add('hidden'));
                 document.querySelectorAll('.light-switch-moon').forEach(el => el.classList.remove('hidden'));
-                localStorage.setItem('dark-mode', true);
+                localStorage.setItem('dark-mode', 'true');
             } else {
                 document.documentElement.classList.remove('dark');
                 document.querySelectorAll('.light-switch-sun').forEach(el => el.classList.remove('hidden'));
                 document.querySelectorAll('.light-switch-moon').forEach(el => el.classList.add('hidden'));
-                localStorage.setItem('dark-mode', false);
+                localStorage.setItem('dark-mode', 'false');
             }
+
+            document.dispatchEvent(lightSwitchedEvent);
         });
     });
 }

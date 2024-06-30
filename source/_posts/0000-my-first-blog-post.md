@@ -2,12 +2,12 @@
 extends: _layouts.post
 section: content
 title: My First Post
-date: 2023-02-09
+date: 2024-07-29
 description: Built with Jigsaw.
 categories: [php, laravel]
-cover_image: /assets/img/jigsaw.png
+#cover_image: /assets/img/jigsaw.png
 #featured: true
 published: true
 ---
 
-This is the start of your first blog post.
+Hello world.

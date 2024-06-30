@@ -41,6 +41,7 @@ return [
             'sort' => '-date',
             'path' => 'blog/{filename}',
             'filter' => function ($item) {
+                return !str_starts_with($item->getFilename(), 'xxxx-');
                 return $item;
             },
         ],
