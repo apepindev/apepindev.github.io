@@ -21,31 +21,21 @@
     @endif
 
     @foreach ($posts->where('featured', true) as $featuredPost)
+        <div class="md:flex w-full mb-6">
+            @if ($featuredPost->cover_image)
+                <div class="flex content-center items-center overflow-hidden col-auto md:mr-4 md:w-1/3">
+                    <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="bg-cover">
+                </div>
+            @endif
 
-    <div class="lg:flex w-full mb-6">
-        @if ($featuredPost->cover_image)
-            <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="bg-contain mb-6 lg:mb-0 col-auto lg:w-1/3 mr-4">
-        @endif
-
-        <div class="col-auto">
-            <h5 class="text-sm mt-0">
-                {{ $featuredPost->getDate()->format('jS F, Y') }} • {{ $featuredPost->getReadTime() }}
-            </h5>
-
-            <h2 class="text-3xl mt-0 mb-1">
-                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="font-bold">
-                    {{ $featuredPost->title }}
-                </a>
-            </h2>
-
-            <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
+            <div class="col-auto {{ $featuredPost->cover_image ? 'md:w-2/3' : '' }}">
+                @include('_components.post-preview-inline', ['post' => $featuredPost, 'isFeatured' => true])
+            </div>
         </div>
 
-    </div>
-
-    @if (! $loop->last)
-        <hr class="border-b my-6">
-    @endif
+        @if (! $loop->last)
+            <hr class="border-b my-6">
+        @endif
     @endforeach
 
 {{--    @include('_components.newsletter-signup')--}}

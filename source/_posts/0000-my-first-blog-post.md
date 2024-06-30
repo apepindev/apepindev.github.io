@@ -1,13 +1,18 @@
 ---
 extends: _layouts.post
 section: content
-title: My First Post
+title: First
+#excerpt: Hello world!
 date: 2024-07-29
 description: Built with Jigsaw.
-categories: [php, laravel]
-#cover_image: /assets/img/jigsaw.png
-#featured: true
-published: true
+#cover_image: OPTIONAL
+#image_credit: OPTIONAL
+categories: [personal, php, laravel]
+featured: false
+published: false
 ---
 
-Hello world.
+## Welcome
+
+Out of all the personal sites I've created over my career, this is the first one that has graduated
+to a public audience. 

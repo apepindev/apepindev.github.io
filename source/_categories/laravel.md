@@ -1,8 +1,6 @@
 ---
 extends: _layouts.category
-title: laravel
+title: Laravel
 color: rose
 description: Posts related to the Laravel framework.
 ---
-
-Posts related to the Laravel framework.

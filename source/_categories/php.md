@@ -1,6 +1,6 @@
 ---
 extends: _layouts.category
-title: php
+title: PHP
 color: purple
 description: Posts related to PHP.
 ---
