@@ -8,7 +8,7 @@
              class="bg-gradient-to-br from-primary-300 to-primary-700 rounded-full h-32 w-32 md:h-52 md:w-52 bg-contain md:mx-auto my-auto">
 
         <div class="self-center ml-0 lg:ml-6 col-auto">
-            <p class="mb-6 mt-3 font-semibold text-5xl">Hi, I'm {{ $page->siteAuthor }}. 👋</p>
+            <p class="mb-6 mt-3 font-semibold text-4xl md:text-5xl">Hi, I'm {{ $page->siteAuthor }}. 👋</p>
 
             <p class="mb-3">I'm a Senior Software Engineer at Kamma working with PHP/Laravel, Python and Node.js.</p>
 
@@ -23,7 +23,7 @@
     @foreach ($posts->where('featured', true) as $featuredPost)
         <div class="md:flex w-full mb-6">
             @if ($featuredPost->cover_image)
-                <div class="flex content-center items-center overflow-hidden col-auto md:mr-4 md:w-1/3">
+                <div class="flex content-center items-center overflow-hidden col-auto mb-4 md:mb-0 md:mr-4 md:w-1/3">
                     <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="bg-cover">
                 </div>
             @endif
