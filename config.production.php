@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'baseUrl' => 'https://apepindev.github.io',
+    'baseUrl' => 'https://apepin.dev',
     'production' => true,
 
     // Collections

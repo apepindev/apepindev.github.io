@@ -12,11 +12,9 @@ header {
         @apply text-lg;
         @apply md:text-2xl;
         @apply font-light;
-        @apply uppercase;
         @apply font-sans;
 
         span {
-            @apply font-bold;
             @apply dark:text-neutral-600;
             @apply text-gray-300;
             @apply tracking-widest;
@@ -27,8 +25,6 @@ header {
 
 nav {
     a {
-        @apply uppercase;
-        @apply font-semibold;
         @apply text-gray-500;
         @apply dark:text-neutral-200;
         @apply hover:text-primary-500;
@@ -69,6 +65,8 @@ code {
     @apply bg-gray-200;
     @apply dark:bg-neutral-900;
     @apply text-gray-700;
+    @apply text-sm;
+    @apply font-normal;
     @apply dark:text-neutral-200;
     @apply rounded;
     @apply transition-colors duration-200;
@@ -103,38 +101,32 @@ h6 {
 
 h1 {
     @apply text-5xl;
-    @apply font-bold;
-    @apply uppercase;
+    @apply font-semibold;
 }
 
 h2 {
     @apply text-4xl;
-    @apply font-bold;
-    @apply uppercase;
+    @apply font-semibold;
 }
 
 h3 {
     @apply text-3xl;
-    @apply font-bold;
-    @apply uppercase;
+    @apply font-semibold;
 }
 
 h4 {
     @apply text-2xl;
     @apply font-normal;
-    @apply uppercase;
 }
 
 h5 {
     @apply text-xl;
     @apply font-normal;
-    @apply uppercase;
 }
 
 h6 {
     @apply text-lg;
     @apply font-light;
-    @apply font-serif;
 }
 
 hr {
@@ -158,7 +150,6 @@ li {
 ol,
 ul {
     @apply my-4;
-    @apply font-serif;
     @apply font-light;
     @apply marker:text-primary-400;
 }
@@ -173,7 +164,6 @@ ul {
 
 p {
     @apply my-3;
-    @apply font-serif;
     @apply font-light;
 
     @screen md {

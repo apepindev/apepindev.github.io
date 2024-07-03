@@ -1,4 +1,4 @@
-<div id="comments"></div>
+<div id="comments" class="mt-8"></div>
 
 @push('scripts')
 <script>

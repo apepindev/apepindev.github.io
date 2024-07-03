@@ -39,14 +39,14 @@ return [
         'posts' => [
             'author' => 'Andrew', // Default author, if not provided in a post
             'sort' => '-date',
-            'path' => 'blog/{filename}',
+            'path' => 'posts/{filename}',
             'filter' => function ($item) {
 //                return !str_starts_with($item->getFilename(), 'xxxx-');
                 return $item;
             },
         ],
         'categories' => [
-            'path' => '/blog/categories/{filename}',
+            'path' => '/posts/categories/{filename}',
             'posts' => function ($page, $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
                     return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;

@@ -8,11 +8,11 @@
              class="bg-gradient-to-br from-primary-300 to-primary-700 rounded-full h-32 w-32 md:h-52 md:w-52 bg-contain md:mx-auto my-auto">
 
         <div class="self-center ml-0 lg:ml-6 col-auto">
-            <p class="mb-6 text-3xl">Hi, I'm <strong>{{ $page->siteAuthor }}</strong>. 👋</p>
+            <p class="mb-6 mt-3 font-semibold text-5xl">Hi, I'm {{ $page->siteAuthor }}. 👋</p>
 
-            <p class="mb-6">I'm a Senior Software Engineer at Kamma working with PHP/Laravel, Python and Node.js.</p>
+            <p class="mb-3">I'm a Senior Software Engineer at Kamma working with PHP/Laravel, Python and Node.js.</p>
 
-            <p class="mb-6">This is where I'll brain dump things I've learnt from work and personal projects.</p>
+            <p class="mb-6 mt-3">This is where I'll brain dump things I've learnt from work and personal projects.</p>
         </div>
     </div>
 

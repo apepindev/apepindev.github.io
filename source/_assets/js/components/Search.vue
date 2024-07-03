@@ -1,10 +1,10 @@
 <template>
   <div class="flex align-middle z-10 h-10 md:mt-0">
 
-    <button class="z-20 h-full ml-6 mr-2 focus:outline-none"
+    <button class="z-20 h-full ml-6 mr-3 focus:outline-none"
             v-show="!searching" @click="showInput"
     >
-      <svg class="search-toggle fill-current h-6 w-6" viewBox="0 0 57.231 57.231" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+      <svg class="search-toggle fill-current h-5 w-5" viewBox="0 0 57.231 57.231" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
         <g>
           <g>
             <path d="M23.945,9.373c-1.652,0-2.992,1.341-2.992,2.992c0,1.654,1.34,2.992,2.992,2.992 c3.656,0,6.921,2.042,8.524,5.333c0.519,1.062,1.583,1.68,2.691,1.68c0.441,0,0.888-0.097,1.309-0.303 c1.486-0.723,2.104-2.514,1.379-4.001C35.235,12.704,29.906,9.373,23.945,9.373z"/>
@@ -53,7 +53,7 @@
             >
               <span class="uppercase font-semibold">{{ result.item.title }}</span>
 
-              <span class="block text-gray-600 dark:text-neutral-300 font-serif normal-case font-thin text-sm my-1"
+              <span class="block text-gray-600 dark:text-neutral-300 normal-case text-sm my-1"
                     v-html="result.item.snippet"></span>
             </a>
 

@@ -70,8 +70,8 @@
         </main>
 
         <footer class="text-center text-xs mt-8 py-4" role="contentinfo">
-            <ul class="flex flex-col md:flex-row justify-center list-none font-sans uppercase">
-                <li class="md:mr-2">
+            <ul class="flex flex-col md:flex-row justify-center list-none">
+                <li class="mx-0">
                     {{ $page->siteName }} •
                     Built with <a href="https://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
                     and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.

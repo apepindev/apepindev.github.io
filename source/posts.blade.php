@@ -1,6 +1,6 @@
 ---
-title: Blog
-description: The list of blog posts for the site
+title: Posts
+description: The list of posts for the site
 pagination:
     collection: posts
     perPage: 4
@@ -8,7 +8,7 @@ pagination:
 @extends('_layouts.main')
 
 @section('body')
-    <h1 class="mb-12">Blog</h1>
+    <h1 class="mb-12">Posts</h1>
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')

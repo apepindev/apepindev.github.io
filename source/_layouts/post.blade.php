@@ -10,8 +10,8 @@
 
     <h1 class="mb-2">{{ $page->title }}</h1>
 
-    <h5 class="text-sm mt-6 mb-2">
-        <span class="font-semibold">{{ $page->author }}</span> • {{ date('jS F, Y', $page->date) }} • {{ $page->getReadTime() }}
+    <h5 class="post-meta text-sm mt-6 mb-4">
+        {{ $page->author }} • {{ date('jS F, Y', $page->date) }} • {{ $page->getReadTime() }}
     </h5>
 
     @if ($page->categories)

@@ -7,7 +7,7 @@ date: 2024-07-29
 description: Built with Jigsaw.
 #cover_image: OPTIONAL
 #image_credit: OPTIONAL
-categories: [personal, php, laravel]
+categories: [personal]
 featured: false
 published: false
 ---
@@ -15,4 +15,4 @@ published: false
 ## Welcome
 
 Out of all the personal sites I've created over my career, this is the first one that has graduated
-to a public audience. 
+to a public audience.

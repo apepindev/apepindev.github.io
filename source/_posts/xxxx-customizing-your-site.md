@@ -76,7 +76,7 @@ _The quick brown fox jumps over the lazy dog_
 [The quick brown fox jumps over the lazy dog](#)
 
 ```php
-class Foo extends bar
+class Foo extends Bar
 {
     public function fooBar()
     {
