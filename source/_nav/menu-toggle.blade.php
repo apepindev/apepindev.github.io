@@ -8,7 +8,7 @@
     </svg>
 
     <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
-        class="hidden fill-current dark:text-white text-gray-700 h-9 w-4" viewBox="0 0 32 32"
+        class="hidden fill-current dark:text-white text-gray-700 transition-colors duration-200 h-9 w-4" viewBox="0 0 32 32"
     >
         <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
     </svg>
