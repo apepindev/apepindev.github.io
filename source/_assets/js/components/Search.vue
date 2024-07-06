@@ -1,7 +1,7 @@
 <template>
-  <div class="flex align-middle z-10 h-10 md:mt-0">
+  <div class="flex align-middle h-10 md:mt-0">
 
-    <button class="z-20 h-full ml-6 mr-3 focus:outline-none"
+    <button class="h-full ml-6 mr-3 focus:outline-none"
             v-show="!searching" @click="showInput"
     >
       <svg class="search-toggle fill-current h-5 w-5" viewBox="0 0 57.231 57.231" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +15,7 @@
     </button>
 
     <div v-show="searching" class="absolute right-0 w-full">
-      <button class="absolute right-0 h-10 z-20 ml-4 lg:pl-6 mr-3.5 focus:outline-none"
+      <button class="absolute right-0 h-10 ml-4 lg:pl-6 mr-3.5 focus:outline-none"
               @click="close"
       >
         <svg xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@
           id="search"
           v-model="query"
           ref="search"
-          class="h-10 w-1/2 rounded-lg placeholder-gray-400 dark:placeholder-neutral-400 bg-gray-200 dark:bg-neutral-900 outline-none px-4 pb-0 pt-px"
+          class="h-10 w-full sm:w-1/2 rounded-lg placeholder-gray-400 dark:placeholder-neutral-400 bg-gray-200 dark:bg-neutral-900 outline-none px-4 pb-0 pt-px"
           :class="{ 'transition-border': query }"
           autocomplete="off"
           name="search"
@@ -40,8 +40,8 @@
           @focusout="close"
         >
 
-        <div v-if="query" class="w-1/2 md:inset-auto text-left mb-4">
-          <div class="flex flex-col bg-gray-200 dark:bg-neutral-900 rounded-b-lg mx-4 md:mx-0">
+        <div v-if="query" class="w-full sm:w-1/2 md:inset-auto text-left mb-4">
+          <div class="flex flex-col bg-gray-200 dark:bg-neutral-900 rounded-b-lg mx-0">
             <a
               v-for="(result, index) in results"
               class="text-xl cursor-pointer p-4"

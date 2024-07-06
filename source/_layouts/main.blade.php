@@ -54,11 +54,11 @@
                         @include('_nav.light-switch')
                     </div>
 
-                    @include('_nav.menu-toggle')
-
-                    <div class="hidden lg:block">
+                    <div class="lg:block">
                         @include('_nav.search-form')
                     </div>
+
+                    @include('_nav.menu-toggle')
                 </div>
             </div>
         </header>
