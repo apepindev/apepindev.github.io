@@ -15,9 +15,7 @@
     @apply invisible;
     @apply font-sans;
     @apply font-semibold;
-    @apply align-text-top;
-    @apply ml-3;
-    @apply text-xl;
+    @apply ml-2;
     @apply hover:text-primary-500;
     @apply text-primary-500/60;
 }

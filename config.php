@@ -3,7 +3,6 @@
 use Illuminate\Support\Str;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
-use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkRenderer;
 use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
 use League\CommonMark\Extension\Strikethrough\StrikethroughExtension;
 use League\CommonMark\Extension\Table\TableExtension;
@@ -21,7 +20,7 @@ return [
                 'html_class' => 'heading-permalink',
                 'insert' => 'after',
                 'title' => "Permalink",
-                'symbol' => HeadingPermalinkRenderer::DEFAULT_SYMBOL,
+                'symbol' => '#',
             ],
         ],
         'extensions' => [

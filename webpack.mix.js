@@ -19,6 +19,7 @@ mix.jigsaw()
         server: 'build_local',
         files: ['build_local/**'],
         notify: false,
+        open: false,
     })
     .sourceMaps()
     .version();
