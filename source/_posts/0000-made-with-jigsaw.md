@@ -13,4 +13,4 @@ published: false
 ---
 
 Well, here it is. My first of several portfolio/blog sites I've created over the years in my career 
-that has graduated to a public audience.   
+that has graduated to a public audience.
