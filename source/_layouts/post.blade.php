@@ -4,7 +4,7 @@
     @if ($page->cover_image)
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image">
         @if ($page->cover_credit)
-            <em>Source {!! $page->cover_credit !!}</em>
+            <em>Credit {!! $page->cover_credit !!}</em>
         @endif
     @endif
 
