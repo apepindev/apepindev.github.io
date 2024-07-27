@@ -3,8 +3,8 @@
 @section('body')
     @if ($page->cover_image)
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image">
-        @if ($page->image_credit)
-            <em>Source {!! $page->image_credit !!}</em>
+        @if ($page->cover_credit)
+            <em>Source {!! $page->cover_credit !!}</em>
         @endif
     @endif
 

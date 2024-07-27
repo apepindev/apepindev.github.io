@@ -38,10 +38,10 @@ return [
         'posts' => [
             'author' => 'Andrew', // Default author, if not provided in a post
             'sort' => '-date',
-            'path' => 'posts/{filename}',
+            'path' => 'posts/{-title}',
             'filter' => function ($item) {
-//                return !str_starts_with($item->getFilename(), 'xxxx-');
-                return $item;
+                return $item->getRelativePath() !== 'jigsaw';
+//                return $item;
             },
         ],
         'categories' => [
