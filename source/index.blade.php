@@ -40,9 +40,8 @@
 
 {{--    @include('_components.newsletter-signup')--}}
 
-    <h2 class="mt-20 mb-12">Recent</h2>
-
     @foreach ($posts->where('featured', false)->take(6)->chunk(2) as $row)
+        <h2 class="mt-20 mb-12">Recent</h2>
         <div class="flex flex-col md:flex-row md:-mx-6">
             @foreach ($row as $post)
                 <div class="w-full md:w-1/2 md:mx-6">

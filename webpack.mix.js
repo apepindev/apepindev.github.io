@@ -14,7 +14,10 @@ mix.jigsaw()
         require('tailwindcss/nesting'),
         require('tailwindcss'),
     ])
-    .options({ processCssUrls: false })
+    .options({
+        processCssUrls: false,
+        clearConsole: false
+    })
     .browserSync({
         server: 'build_local',
         files: ['build_local/**'],

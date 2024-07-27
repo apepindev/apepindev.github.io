@@ -6,9 +6,10 @@ excerpt: This is a starter template for creating a beautiful, customizable blog 
 date: 2022-08-03
 description: Getting started with the Jigsaw blog starter template
 cover_image: /assets/img/coding.jpg
-image_credit: <a href="https://unsplash.com/@cdr6934?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Ried</a>
+cover_credit: <a href="https://unsplash.com/@cdr6934?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Ried</a>
 featured: true
-categories: [configuration]
+categories: 
+  - configuration
 ---
 
 ## Configuration
