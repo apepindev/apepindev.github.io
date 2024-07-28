@@ -33,7 +33,7 @@ framework that I'm very familiar with.
 This site started off using [their blog starter template](https://github.com/tighten/jigsaw-blog-template), but I have made some changes.
 I've "flatten" the overall design, add a light/dark mode toggle, added [giscus](https://giscus.app/), and
 other miscellaneous changes. Feel free to use the same template here;
+
 [apepindev/jigsaw-blog-plus](https://github.com/apepindev/jigsaw-blog-plus)
 
 ![](/assets/img/2024/07/blog-plus-screenshot.png)
-
