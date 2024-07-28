@@ -1,29 +1,43 @@
 name: Build and publish
-on: workflow_dispatch
+
+on:
+  push:
+    branches:
+      - 'main'
+
 jobs:
   publish-site:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.2
+
       - name: Install Composer Dependencies
         run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+
       - name: Install NPM Dependencies
         run: npm install
+
       - name: Build Site
         run: npm run prod
+
       - name: Add CNAME
         run: echo 'apepin.dev' > ./build_production/CNAME
+
       - name: Stage Files
         run: git add -f build_production
+
       - name: Commit files
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git commit -m "Build for deploy"
+
       - name: Publish
         run: |
           git subtree split --prefix build_production -b gh-pages
