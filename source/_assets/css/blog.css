@@ -37,6 +37,12 @@ h6:hover .heading-permalink
     }
 }
 
+.uses-border {
+    transition-property: border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
 .category {
     @apply text-gray-500;
     @apply bg-gray-300;
