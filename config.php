@@ -14,24 +14,6 @@ return [
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'siteAuthor' => 'Andrew',
 
-    'commonmark' => [
-        'config' => [
-            'heading_permalink' => [
-                'html_class' => 'heading-permalink',
-                'insert' => 'after',
-                'title' => "Permalink",
-                'symbol' => '#',
-            ],
-        ],
-        'extensions' => [
-            new AttributesExtension,
-            new SmartPunctExtension,
-            new StrikethroughExtension,
-            new TableExtension,
-            new HeadingPermalinkExtension,
-        ],
-    ],
-
     // collections
     'merge_collection_configs' => true,
     'collections' => [
@@ -94,6 +76,60 @@ return [
     'isActive' => function ($page, $path) {
         return Str::contains(trimPath($page->getPath()), trimPath($path));
     },
+
+    'commonmark' => [
+        'config' => [
+            'renderer' => [
+                'block_separator' => "\n",
+                'inner_separator' => "\n",
+                'soft_break'      => "\n",
+            ],
+            'commonmark' => [
+                'enable_em' => true,
+                'enable_strong' => true,
+                'use_asterisk' => true,
+                'use_underscore' => true,
+                'unordered_list_markers' => ['-', '*', '+'],
+            ],
+            'html_input' => 'escape',
+            'allow_unsafe_links' => false,
+            'max_nesting_level' => PHP_INT_MAX,
+            'slug_normalizer' => [
+                'max_length' => 255,
+            ],
+            'heading_permalink' => [
+                'html_class' => 'heading-permalink',
+                'insert' => 'after',
+                'title' => 'Permalink',
+                'symbol' => '#',
+            ],
+            'smartpunct' => [
+                'double_quote_opener' => '“',
+                'double_quote_closer' => '”',
+                'single_quote_opener' => '‘',
+                'single_quote_closer' => '’',
+            ],
+            'table' => [
+                'wrap' => [
+                    'enabled' => false,
+                    'tag' => 'div',
+                    'attributes' => [],
+                ],
+                'alignment_attributes' => [
+                    'left'   => ['align' => 'left'],
+                    'center' => ['align' => 'center'],
+                    'right'  => ['align' => 'right'],
+                ],
+            ],
+        ],
+        'extensions' => [
+            new AttributesExtension,
+            new SmartPunctExtension,
+            new StrikethroughExtension,
+            new TableExtension,
+            new HeadingPermalinkExtension,
+        ],
+    ],
 ];
 
 function textOnly(string $content): string
