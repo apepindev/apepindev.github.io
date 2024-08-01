@@ -10,7 +10,7 @@
 
     <h1 class="mb-2">{{ $page->title }}</h1>
 
-    <h5 class="post-meta text-sm mt-6 mb-4">
+    <h5 class="post-meta text-sm font-light mt-6 mb-4">
         {{ $page->author }} • {{ date('jS F, Y', $page->date) }} • {{ $page->getReadTime() }}
     </h5>
 

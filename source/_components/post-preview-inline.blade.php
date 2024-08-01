@@ -7,7 +7,7 @@
         >{{ $post->title }}</a>
     </h2>
 
-    <h5 class="post-meta text-sm mt-0">
+    <h5 class="post-meta text-sm font-light mt-0">
         {{ $post->getDate()->format('jS F, Y') }} • {{ $post->getReadTime() }}
     </h5>
 

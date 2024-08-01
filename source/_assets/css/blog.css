@@ -12,12 +12,12 @@
 }
 
 .heading-permalink {
-    @apply invisible;
     @apply font-sans;
-    @apply font-semibold;
+    @apply font-normal;
     @apply ml-2;
-    @apply hover:text-primary-500;
-    @apply text-primary-500/60;
+    @apply lg:invisible;
+    @apply lg:hover:text-primary-500;
+    @apply lg:text-primary-500/60;
 }
 
 h1:hover .heading-permalink,

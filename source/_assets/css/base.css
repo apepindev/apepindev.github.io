@@ -100,33 +100,33 @@ h6 {
 }
 
 h1 {
-    @apply text-5xl;
-    @apply font-semibold;
-}
-
-h2 {
     @apply text-4xl;
     @apply font-semibold;
 }
 
-h3 {
+h2 {
     @apply text-3xl;
     @apply font-semibold;
 }
 
-h4 {
+h3 {
     @apply text-2xl;
-    @apply font-normal;
+    @apply font-semibold;
+}
+
+h4 {
+    @apply text-xl;
+    @apply font-semibold;
 }
 
 h5 {
-    @apply text-xl;
-    @apply font-normal;
+    @apply text-lg;
+    @apply font-semibold;
 }
 
 h6 {
-    @apply text-lg;
-    @apply font-light;
+    @apply text-base;
+    @apply font-semibold;
 }
 
 hr {

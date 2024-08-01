@@ -34,7 +34,7 @@ This starter template comes pre-loaded with [Tailwind CSS](https://tailwindcss.c
 ---
 
 ![](/assets/img/coding.jpg)
-*Source <a href="https://unsplash.com/@cdr6934?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Ried</a>*
+*Source [Chris Ried](https://unsplash.com/@cdr6934?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)*
 
 ---
 

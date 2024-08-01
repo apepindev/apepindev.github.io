@@ -22,8 +22,8 @@ return [
             'sort' => '-date',
             'path' => 'posts/{-title}',
             'filter' => function ($item) {
-                return $item->getRelativePath() !== 'jigsaw';
-//                return $item;
+//                return $item->getRelativePath() !== 'jigsaw';
+                return $item;
             },
         ],
         'categories' => [
@@ -91,7 +91,7 @@ return [
                 'use_underscore' => true,
                 'unordered_list_markers' => ['-', '*', '+'],
             ],
-            'html_input' => 'escape',
+            'html_input' => 'allow',
             'allow_unsafe_links' => false,
             'max_nesting_level' => PHP_INT_MAX,
             'slug_normalizer' => [
