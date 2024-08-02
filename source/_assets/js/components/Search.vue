@@ -38,6 +38,7 @@
           type="text"
           @keyup.esc="close"
           @focusout="close"
+          @change="close"
         >
 
         <div v-if="query" class="w-full sm:w-1/2 md:inset-auto text-left mb-4">
@@ -51,7 +52,7 @@
               :key="result.link"
               @mousedown.prevent
             >
-              <span class="uppercase font-semibold">{{ result.item.title }}</span>
+              <span class="font-semibold">{{ result.item.title }}</span>
 
               <span class="block text-gray-600 dark:text-neutral-300 normal-case text-sm my-1"
                     v-html="result.item.snippet"></span>

@@ -7,7 +7,7 @@ description: Get in touch with us
 @section('body')
 <h1>What I use</h1>
 
-<p class="mb-8">Here's what helps me do my day-to-day.</p>
+<p class="lg:mb-8">Here's what helps me do my day-to-day.</p>
 
 <div class="flow-root py-3">
     <x-uses-section heading="Workstations">
@@ -18,13 +18,13 @@ description: Get in touch with us
         </p>
 
         <h5>16-inch, M1 Pro, 2021 MacBook Pro</h5>
-        <p>
+        <p class="mb-0">
             This is my work machine and it's quite a bit more powerful! With a faster chipset, 32GB
             memory and 1TB of storage it makes light work with the software and containers I run.
         </p>
     </x-uses-section>
 
-    <x-uses-section heading="Development Software">
+    <x-uses-section heading="Development software">
         <h5><a href="https://www.jetbrains.com/">JetBrains IDEs</a></h5>
         <p>
             My go-to IDE is anything by JetBrains. They all come pre-packed with tons of features
@@ -44,7 +44,7 @@ description: Get in touch with us
         </p>
 
         <h5><a href="https://github.com/usebruno/bruno">Bruno</a></h5>
-        <p>
+        <p class="mb-0">
             The only "offline" API client with Git collaboration in mind. It's fairly new to the
             scene but it has already gained a lot of attention and works great.
         </p>
@@ -64,7 +64,7 @@ description: Get in touch with us
         </p>
 
         <h5><a href="https://boop.okat.best/">Boop</a></h5>
-        <p>
+        <p class="mb-0">
             A neat text manipulation tool that already comes with an array of useful scripts. You
             can also create your own scripts too.
         </p>
@@ -80,7 +80,7 @@ description: Get in touch with us
             <h6>Elgato Wave:3 Microphone</h6>
             <h6>Elgato Facecam</h6>
             <h6>Elgato Key Light Air</h6>
-            <h6>BenQ ScreenBar Halo</h6>
+            <h6 class="mb-0">BenQ ScreenBar Halo</h6>
         </div>
     </x-uses-section>
 </div>
