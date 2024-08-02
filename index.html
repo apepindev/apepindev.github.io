@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Generate an elegant blog with Jigsaw">
+
+        <meta property="og:title" content="apepin.dev"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://apepin.dev/"/>
+        <meta property="og:description" content="Generate an elegant blog with Jigsaw" />
+
+        <title>apepin.dev</title>
+
+        <link rel="home" href="https://apepin.dev">
+        <link rel="icon" href="/favicon.svg">
+        <link href="/rss/feed.atom" type="application/atom+xml" rel="alternate" title="apepin.dev Atom Feed">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+                    <!-- Insert analytics code here -->
+        
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=2c32e2041a0f43b1af7384f93acf5b4a">
+
+        <script>
+            if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.querySelector('html').classList.add('dark');
+            } else {
+                document.querySelector('html').classList.remove('dark');
+            }
+        </script>
+    </head>
+
+    <body class="flex flex-col justify-between min-h-screen leading-normal max-w-4xl mx-auto px-6">
+        <header class="relative flex items-center h-20 lg:h-24" role="banner">
+            <div class="container flex items-center max-w-8xl mx-auto">
+                <div class="flex items-center">
+                    <a href="/" title="apepin.dev home" class="inline-flex items-center">
+                        <h1 class="site-title my-0">
+                            <span class="">//</span> apepin.dev
+                        </h1>
+                    </a>
+                </div>
+
+                <div class="flex flex-1 justify-end items-center">
+                    <nav class="hidden lg:flex items-center justify-end tracking-wide">
+    <a title="apepin.dev About" href="/about"
+   class="flex my-1 lg:my-0 lg:ml-6 ">
+    about
+</a>
+
+<a title="apepin.dev Posts" href="/posts"
+   class="flex my-1 lg:my-0 lg:ml-6 ">
+    posts
+</a>
+
+<a title="apepin.dev Uses" href="/uses"
+   class="flex my-1 lg:my-0 lg:ml-6 ">
+    uses
+</a></nav>
+
+                    <div class="hidden lg:block">
+                        <label class="flex select-none h-auto my-6 lg:my-0 lg:ml-6">
+    <input type="checkbox" name="light-switch" class="light-switch hidden"/>
+    <svg class="light-switch-sun w-5 h-5 hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+    </svg>
+
+    <svg class="light-switch-moon w-5 h-5 hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.509 5.75c0-1.493.394-2.96 1.144-4.25h-.081a8.5 8.5 0 1 0 7.356 12.746A8.5 8.5 0 0 1 8.509 5.75Z"/>
+    </svg>
+</label>
+
+                    </div>
+
+                    <div class="lg:block">
+                        <div id="vue-search">
+     <search></search>
+</div>
+                    </div>
+
+                    <button id="menu-toggle" class="h-10 px-3 lg:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current dark:text-neutral-200 text-gray-500 h-9 w-4" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current dark:text-white text-gray-700 transition-colors duration-200 h-9 w-4" viewBox="0 0 32 32"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+                </div>
+            </div>
+        </header>
+
+        <nav id="js-nav-menu" class="absolute inset-0 hidden lg:hidden">
+    <div onclick="navMenu.toggle()" class="fixed transition-colors duration-200 backdrop-blur inset-0"></div>
+    <div class="fixed right-0 h-full flex flex-col transition-colors duration-200 shadow bg-gray-200/90 dark:bg-neutral-900/90 items-end w-2/5 md:w-1/5 py-3 pr-8 mr-0 pt-24 mx-4">
+        <a title="apepin.dev About" href="/about"
+   class="flex my-1 lg:my-0 lg:ml-6 ">
+    about
+</a>
+
+<a title="apepin.dev Posts" href="/posts"
+   class="flex my-1 lg:my-0 lg:ml-6 ">
+    posts
+</a>
+
+<a title="apepin.dev Uses" href="/uses"
+   class="flex my-1 lg:my-0 lg:ml-6 ">
+    uses
+</a>        <label class="flex select-none h-auto my-6 lg:my-0 lg:ml-6">
+    <input type="checkbox" name="light-switch" class="light-switch hidden"/>
+    <svg class="light-switch-sun w-5 h-5 hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+    </svg>
+
+    <svg class="light-switch-moon w-5 h-5 hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.509 5.75c0-1.493.394-2.96 1.144-4.25h-.081a8.5 8.5 0 1 0 7.356 12.746A8.5 8.5 0 0 1 8.509 5.75Z"/>
+    </svg>
+</label>
+
+    </div>
+</nav>
+
+        <main role="main" class="flex-auto w-full container py-16">
+            
+    <div class="lg:flex align-middle sm:row-auto col-auto mb-12">
+        <img src="/assets/img/memoji.png"
+             alt="About image"
+             class="bg-gradient-to-br from-primary-300 to-primary-700 rounded-full h-32 w-32 md:h-52 md:w-52 bg-contain md:mx-auto my-auto">
+
+        <div class="self-center ml-0 lg:ml-6 col-auto">
+            <p class="mb-6 mt-3 font-semibold text-4xl md:text-5xl">Hi, I'm Andrew. 👋</p>
+
+            <p class="mb-3">I'm a Senior Software Engineer at Kamma working with PHP/Laravel, Python and Node.js.</p>
+
+            <p class="mb-6 mt-3">This is where I'll brain dump things I've learnt from work and personal projects.</p>
+        </div>
+    </div>
+
+    
+    
+
+
+            <h2 class="mt-20 mb-12">Recent</h2>
+    
+            <div class="flex flex-col md:flex-row md:-mx-6">
+                            <div class="w-full md:w-1/2 md:mx-6">
+                    <div class="flex flex-col">
+    <h2 class="text-3xl mb-1 mt-0">
+        <a
+            href="https://apepin.dev/posts/made-with-jigsaw"
+            title="Read more - Made with Jigsaw"
+            class="font-semibold font-sans"
+        >Made with Jigsaw</a>
+    </h2>
+
+    <h5 class="post-meta text-sm font-light mt-0">
+        20th July, 2024 • 1 minute
+    </h5>
+
+    <p class="my-0">This is my first of several portfolio/blog sites I’ve created on and off over the years in my
+career that has graduated to a public audience. It had been fun using different
+languages and...</p>
+
+    <div class="flex-row mb-2 mt-4">
+                                    <a
+        href="/posts/categories/personal"
+        title="View posts in Personal"
+        class="inline-block leading-loose tracking-wide uppercase text-xs rounded mr-2 px-3 pt-px category-primary"
+    >Personal</a>
+
+
+                        </div>
+
+    <a
+        href="https://apepin.dev/posts/made-with-jigsaw"
+        title="Read more - Made with Jigsaw"
+        class="flex justify-end tracking-wide text-sm"
+    >Read &RightArrow;</a>
+</div>
+                </div>
+
+                                    </div>
+
+                    </main>
+
+        <footer class="text-center text-xs mt-8 py-4" role="contentinfo">
+            <ul class="flex flex-col md:flex-row justify-center list-none">
+                <li class="mx-0">
+                    apepin.dev •
+                    Built with <a href="https://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                </li>
+            </ul>
+        </footer>
+
+        <script src="/assets/build/js/main.js?id=19db10468fa58571e390d64c0fdd984d"></script>
+
+        <script>
+    if (document.querySelector('html').classList.contains('dark')) {
+        document.querySelectorAll('.light-switch-moon').forEach(el => el.classList.remove('hidden'));
+    } else {
+        document.querySelectorAll('.light-switch-sun').forEach(el => el.classList.remove('hidden'));
+    }
+</script>
+<script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+            document.getElementById('menu-toggle').classList.toggle('fixed');
+            document.getElementById('menu-toggle').classList.toggle('z-10');
+        },
+    }
+</script>
+<script>
+    if (document.querySelector('html').classList.contains('dark')) {
+        document.querySelectorAll('.light-switch-moon').forEach(el => el.classList.remove('hidden'));
+    } else {
+        document.querySelectorAll('.light-switch-sun').forEach(el => el.classList.remove('hidden'));
+    }
+</script>
+
+    </body>
+</html>

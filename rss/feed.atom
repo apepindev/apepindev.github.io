@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>apepin.dev</title>
+    <link href="https://apepin.dev/posts" />
+    <link type="application/atom+xml" rel="self" href="https://apepin.dev/rss/feed.atom" />
+    <updated>2024-08-02T19:55:28+00:00</updated>
+    <id>https://apepin.dev/rss/feed.atom</id>
+    <author>
+        <name>Andrew</name>
+    </author>
+                <entry>
+    <id>https://apepin.dev/posts/made-with-jigsaw</id>
+    <link type="text/html" rel="alternate" href="https://apepin.dev/posts/made-with-jigsaw" />
+    <title>Made with Jigsaw</title>
+    <published>2024-07-20T00:00:00+00:00</published>
+    <updated>2024-07-20T00:00:00+00:00</updated>
+    <author>
+        <name>Andrew</name>
+    </author>
+    <summary type="html">This is my first of several portfolio/blog sites I’ve created on and off over the years in my
+career that has graduated to a public audience. It had been fun using different
+languages and frameworks and was a great learning experience, but I was never......</summary>
+    <content type="html"><![CDATA[
+        <h2>Well, here it is<a id="content-well-here-it-is" href="#content-well-here-it-is" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
+<p>This is my first of several portfolio/blog sites I’ve created on and off over the years in my
+career that has graduated to a public audience. It had been fun using different
+languages and frameworks and was a great learning experience, but I was never
+completely satisfied in the end result with either of them. They were built on
+foundations that were either overkill, awkward to use/work with, or were not rich enough
+in features.</p>
+<h2>Jigsaw is great<a id="content-jigsaw-is-great" href="#content-jigsaw-is-great" class="heading-permalink" aria-hidden="true" title="Permalink">#</a></h2>
+<p>Fast forward to 2024 I was glad to have stumbled across <a href="https://jigsaw.tighten.com/">Jigsaw</a>. Jigsaw was perfect
+for me as it checked a lot of my boxes. I can host this for free on Github Pages, it’s
+simple and easy to use and maintain, and also has rich features from the Laravel
+framework that I’m very familiar with.</p>
+<p>This site started off using <a href="https://github.com/tighten/jigsaw-blog-template">their blog starter template</a>, but I have made some changes.
+I’ve “flatten” the overall design, add a light/dark mode toggle, added <a href="https://giscus.app/">giscus</a>, and
+other miscellaneous changes. Feel free to use the same template here;</p>
+<p><a href="https://github.com/apepindev/jigsaw-blog-plus">apepindev/jigsaw-blog-plus</a></p>
+<p><img src="/assets/img/2024/07/blog-plus-screenshot.png" alt="" /></p>
+    ]]></content>
+</entry>
+    </feed>
