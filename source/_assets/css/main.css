@@ -9,3 +9,5 @@
 @import 'blog';
 
 @import 'tailwindcss/utilities';
+
+.steadyer-test { color: inherit; order: 1; }
