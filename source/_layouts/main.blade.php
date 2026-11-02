@@ -38,7 +38,6 @@
         <script src="https://steadyer.app/beacon.js" data-beacon-key="lNCoL9KeTG6xq5Q4AS6lmqMvGjYVd7lY" async></script>
     </head>
 
-    <!-- steadyer-test-marker -->
     <body class="flex flex-col justify-between min-h-screen leading-normal max-w-4xl mx-auto px-6">
         <header class="relative flex items-center h-20 lg:h-24" role="banner">
             <div class="container flex items-center max-w-8xl mx-auto">
