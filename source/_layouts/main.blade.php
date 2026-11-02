@@ -34,6 +34,8 @@
                 document.querySelector('html').classList.remove('dark');
             }
         </script>
+
+        <script src="https://steadyer.app/beacon.js" data-beacon-key="lNCoL9KeTG6xq5Q4AS6lmqMvGjYVd7lY" async></script>
     </head>
 
     <body class="flex flex-col justify-between min-h-screen leading-normal max-w-4xl mx-auto px-6">
