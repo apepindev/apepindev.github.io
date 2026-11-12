@@ -16,9 +16,10 @@
         <link rel="icon" href="/favicon.svg">
         <link href="/rss/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
+        <link rel="preload" href="/assets/fonts/FiraCodeNerdFont-Regular.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,400..600&family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
         @if ($page->production)
             <!-- Insert analytics code here -->
@@ -41,7 +42,7 @@
     <body class="flex flex-col min-h-screen">
         <!--
         THESIS: The blog is a technical drawing of one engineer's work. A sheet between two rails, crosshair marks, a post schedule and a title block replace the generic hero-plus-cards template.
-        OWN-WORLD: White sheet #FFFFFF on a dotted margin, ink #111418, dashed secondary rules, hatched bands, lime highlighter #D9F24A. Schibsted Grotesk for text, Martian Mono for labels, dates and code. Dark mode swaps the same variables.
+        OWN-WORLD: White sheet #FFFFFF on a dotted margin, ink #111418, dashed secondary rules, hatched bands, lime highlighter #D9F24A. Schibsted Grotesk for text, FiraCode Nerd Font for labels, dates and code. Dark mode swaps the same variables.
         STORY: Readers see who Andrew is and his stack, open the latest post, scan the schedule, and find the tools he uses.
         FIRST VIEWPORT: Header row with the // apepin.dev mark, nav, search and theme switch. Large "Hi, I'm Andrew." left, memoji in a measured dashed frame right.
         FORM: Prototype A (drafting sheet) with prototype C's colour and type, chosen by the user on 2026-11-12. Seed key: none, the brief pinned the world.

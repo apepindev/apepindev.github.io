@@ -3,8 +3,44 @@
  * Layout comes from prototype A: a centred sheet between two rails, crosshair marks
  * where row rules meet the rails, a post schedule table and a title block footer.
  * Colour and type come from prototype C: black ink on white, dashed secondary lines,
- * hatched bands and a lime highlighter, set in Schibsted Grotesk and Martian Mono.
+ * hatched bands and a lime highlighter, set in Schibsted Grotesk and FiraCode Nerd Font.
  */
+
+/*
+ * FiraCode Nerd Font v3.4.0 (SIL OFL, licence beside the files). Subset to Latin,
+ * punctuation, arrows, box drawing and powerline glyphs: 42KB per weight against 2.6MB.
+ */
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src: url("/assets/fonts/FiraCodeNerdFont-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src: url("/assets/fonts/FiraCodeNerdFont-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src: url("/assets/fonts/FiraCodeNerdFont-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src: url("/assets/fonts/FiraCodeNerdFont-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --paper: #FFFFFF;
@@ -22,10 +58,11 @@
     /* Highlighter band: the lower 40% of the line box, like a marker stroke. */
     --hl-from: 52%;
     --hl-to: 92%;
-    --code-bg: #111418;
-    --code-rule: #2A3038;
-    --code-ink: #E6E9EE;
-    --code-faint: #9AA3AF;
+    /* Snazzy panel, the same in light and dark mode. */
+    --code-bg: #282A36;
+    --code-rule: #3A3C4A;
+    --code-ink: #EFF0EB;
+    --code-faint: #97979B;
     color-scheme: light;
 }
 
@@ -43,8 +80,6 @@
     /* On a dark ground the band sits under the text so light text keeps its contrast. */
     --hl-from: 84%;
     --hl-to: 98%;
-    --code-bg: #08090B;
-    --code-rule: #262B32;
     color-scheme: dark;
 }
 
@@ -222,7 +257,6 @@ a.tag:hover {
 code {
     @apply font-mono;
     font-size: 0.85em;
-    font-stretch: 87.5%;
     padding: 0.1em 0.35em;
     border: 1px dashed var(--rule-soft);
     background: var(--margin);
@@ -235,7 +269,6 @@ pre {
     background: var(--code-bg);
     color: var(--code-ink);
     font-size: 0.8125rem;
-    font-stretch: 87.5%;
     line-height: 1.8;
     overflow-x: auto;
     border: 1px solid var(--rule);
@@ -250,7 +283,7 @@ pre {
     }
 
     ::selection {
-        background: #3B4452;
+        background: rgba(151, 151, 155, 0.3);
         color: #FFFFFF;
     }
 }

@@ -1,0 +1,85 @@
+/*
+ * Snazzy highlight.js theme.
+ * Colours from https://github.com/sindresorhus/hyper-snazzy (the palette behind terminal-snazzy).
+ * The panel background, text and border come from --code-* in base.css.
+ * Comments use the Snazzy cursor grey #97979b: 4.6:1 on #282a36. The palette's
+ * #686868 bright black measures 2.9:1 and is too faint for reading.
+ */
+
+.hljs {
+    color: #eff0eb;
+}
+
+/* Magenta: keywords and control flow */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword,
+.hljs-doctag {
+    color: #ff6ac1;
+}
+
+/* Yellow: strings */
+.hljs-string,
+.hljs-regexp,
+.hljs-meta .hljs-string,
+.hljs-template-tag,
+.hljs-addition {
+    color: #f3f99d;
+}
+
+/* Green: function and class names */
+.hljs-title,
+.hljs-function .hljs-title,
+.hljs-title.function_,
+.hljs-section,
+.hljs-selector-id {
+    color: #5af78e;
+}
+
+/* Cyan: types, built-ins and class references */
+.hljs-built_in,
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-title.class_,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-meta {
+    color: #9aedfe;
+}
+
+/* Blue: variables, properties and attributes */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attr,
+.hljs-attribute,
+.hljs-property,
+.hljs-params,
+.hljs-selector-attr {
+    color: #57c7ff;
+}
+
+/* Red: numbers, literals, HTML tags and deletions */
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-tag,
+.hljs-name,
+.hljs-link,
+.hljs-deletion {
+    color: #ff5c57;
+}
+
+/* Grey: comments */
+.hljs-comment,
+.hljs-quote {
+    color: #97979b;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}

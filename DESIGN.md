@@ -11,8 +11,8 @@ colors:
   reg: "#6B7380"
   hatch: "#C3C9D1"
   highlighter: "#D9F24A"
-  code-bg: "#111418"
-  code-ink: "#E6E9EE"
+  code-bg: "#282A36"
+  code-ink: "#EFF0EB"
   dark-paper: "#121417"
   dark-margin: "#0B0C0E"
   dark-ink: "#E9ECEF"
@@ -34,11 +34,11 @@ typography:
     fontSize: 17px
     lineHeight: 1.75
   label:
-    fontFamily: Martian Mono
+    fontFamily: FiraCode Nerd Font
     fontSize: 11px
     letterSpacing: 0.06em
   code:
-    fontFamily: Martian Mono
+    fontFamily: FiraCode Nerd Font
     fontSize: 13px
     lineHeight: 1.8
 rounded:
@@ -91,14 +91,14 @@ All colours are CSS variables in `source/_assets/css/base.css`. The `.dark` clas
 
 ## Typography
 
-Schibsted Grotesk for all reading text and headings. Martian Mono for labels, dates, read times, tags, code and the `// apepin.dev` mark. Mono never decorates prose.
+Schibsted Grotesk for all reading text and headings. FiraCode Nerd Font for labels, dates, read times, tags, code and the `// apepin.dev` mark. Mono never decorates prose.
 
 ### Hierarchy
 - Display: page titles at `clamp(2.5rem, 10vw, 5rem)`, home greeting up to 6rem, weight 800, tracking -0.04em.
 - Section heading: 2rem, weight 800.
 - Schedule title: 1.375rem, weight 700.
 - Body: 17px, line height 1.75, measure 68ch in `.prose`.
-- Label: 11px Martian Mono, uppercase, tracking 0.06em, faint colour.
+- Label: 11px FiraCode Nerd Font, uppercase, tracking 0.06em, faint colour.
 
 ## Layout
 
@@ -116,7 +116,7 @@ None. The sheet is flat. Depth comes from rules, dashed frames and the dotted ma
 - Icon button (`.icon-btn`): 44px square, dashed ink border, fills with highlighter on hover. Used for search, theme switch, menu and pagination.
 - Tag (`.tag`): dashed border, 11px mono text.
 - Frame (`.frame` + `.dimension`): dashed box with a measured dimension line above and a `FIG. n` caption below (`.fig-caption`).
-- Code block: dark panel in both themes with a 1px border, Martian Mono at 87.5% width, highlight.js atom-one-dark colours.
+- Code block: dark panel in both themes with a 1px border, FiraCode Nerd Font, Snazzy colours (`source/_assets/css/snazzy.css`) on #282A36.
 - Title block footer (`.title-block`): 4 by 2 grid of label and value cells.
 
 ## Do's and Don'ts

@@ -29,7 +29,7 @@ module.exports = {
             },
             fontFamily: {
                 sans: ['"Schibsted Grotesk"', ...defaults.fontFamily.sans],
-                mono: ['"Martian Mono"', ...defaults.fontFamily.mono],
+                mono: ['"FiraCode Nerd Font"', ...defaults.fontFamily.mono],
             },
             maxWidth: {
                 sheet: '75rem',
