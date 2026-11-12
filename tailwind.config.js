@@ -1,5 +1,7 @@
 const defaults = require('tailwindcss/defaultTheme');
-const colors = require("tailwindcss/colors");
+
+// Accent colour for highlights, hovers and text selection, in light and dark mode.
+const highlight = '#D9F24A';
 
 module.exports = {
     darkMode: 'class',
@@ -15,36 +17,24 @@ module.exports = {
     },
     theme: {
         extend: {
+            // Values come from the CSS variables in base.css, so dark mode swaps them in one place.
             colors: {
-                primary: colors.teal,
+                paper: 'var(--paper)',
+                ink: 'var(--ink)',
+                muted: 'var(--muted)',
+                faint: 'var(--faint)',
+                rule: 'var(--rule)',
+                hl: 'var(--hl)',
+                highlight,
             },
             fontFamily: {
-                // sans: ['Montserrat', ...defaults.fontFamily.sans],
-                // serif: ['Merriweather', ...defaults.fontFamily.serif],
-                mono: ['Fira Code', ...defaults.fontFamily.mono],
-            },
-            lineHeight: {
-                normal: '1.6',
-                loose: '1.75',
+                sans: ['"Schibsted Grotesk"', ...defaults.fontFamily.sans],
+                mono: ['"Martian Mono"', ...defaults.fontFamily.mono],
             },
             maxWidth: {
-                '8xl': '88rem',
+                sheet: '75rem',
+                prose: '68ch',
             },
-            boxShadow: {
-                search: '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
-            },
-        },
-        fontSize: {
-            xs: '.8rem',
-            sm: '.925rem',
-            base: '1rem',
-            lg: '1.125rem',
-            xl: '1.25rem',
-            '2xl': '1.5rem',
-            '3xl': '1.75rem',
-            '4xl': '2.125rem',
-            '5xl': '2.625rem',
-            '6xl': '10rem',
         },
     },
 };

@@ -1,7 +1,7 @@
 {
     "require": {
-        "php": ">=8.0 <8.3",
-        "tightenco/jigsaw": "^1.7",
+        "php": ">=8.4",
+        "tightenco/jigsaw": "^1.8",
         "samdark/sitemap": "^2.2.1"
     },
     "autoload": {

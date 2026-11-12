@@ -1,17 +1,18 @@
-<label class="flex select-none h-auto my-6 lg:my-0 lg:ml-6">
-    <input type="checkbox" name="light-switch" class="light-switch hidden"/>
-    <svg class="light-switch-sun w-5 h-5 hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+<label class="icon-btn" title="Toggle dark mode">
+    <input type="checkbox" name="light-switch" class="light-switch sr-only" aria-label="Dark mode"/>
+    <svg class="light-switch-sun hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
     </svg>
-
-    <svg class="light-switch-moon w-5 h-5 hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.509 5.75c0-1.493.394-2.96 1.144-4.25h-.081a8.5 8.5 0 1 0 7.356 12.746A8.5 8.5 0 0 1 8.509 5.75Z"/>
+    <svg class="light-switch-moon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
     </svg>
 </label>
 
 @push('scripts')
 <script>
     if (document.querySelector('html').classList.contains('dark')) {
+        document.querySelectorAll('.light-switch').forEach(el => el.checked = true);
         document.querySelectorAll('.light-switch-moon').forEach(el => el.classList.remove('hidden'));
     } else {
         document.querySelectorAll('.light-switch-sun').forEach(el => el.classList.remove('hidden'));

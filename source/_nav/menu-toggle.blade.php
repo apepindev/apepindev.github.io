@@ -1,16 +1,9 @@
-<button id="menu-toggle" class="h-10 px-3 lg:hidden focus:outline-none"
-    onclick="navMenu.toggle()"
->
-    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
-        class="fill-current dark:text-neutral-200 text-gray-500 h-9 w-4" viewBox="0 0 32 32"
-    >
-        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+<button id="menu-toggle" type="button" class="icon-btn lg:hidden" aria-controls="js-nav-menu" aria-expanded="false" aria-label="Open menu" onclick="navMenu.toggle()">
+    <svg id="js-nav-menu-show" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
     </svg>
-
-    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
-        class="hidden fill-current dark:text-white text-gray-700 transition-colors duration-200 h-9 w-4" viewBox="0 0 32 32"
-    >
-        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    <svg id="js-nav-menu-hide" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18"/>
     </svg>
 </button>
 
@@ -19,11 +12,13 @@
     const navMenu = {
         toggle() {
             const menu = document.getElementById('js-nav-menu');
-            menu.classList.toggle('hidden');
-            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
-            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
-            document.getElementById('menu-toggle').classList.toggle('fixed');
-            document.getElementById('menu-toggle').classList.toggle('z-10');
+            const button = document.getElementById('menu-toggle');
+            const open = menu.classList.toggle('hidden') === false;
+
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden', !open);
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden', open);
+            button.setAttribute('aria-expanded', open ? 'true' : 'false');
+            button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
         },
     }
 </script>

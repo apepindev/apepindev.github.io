@@ -1,15 +1,16 @@
 ---
-title: Contact
-description: Get in touch with us
+title: Uses
+description: The hardware and software Andrew uses day to day
 ---
 @extends('_layouts.main')
 
 @section('body')
-<h1>What I use</h1>
+<x-row :first="true" class="px-16 px-sheet pt-20 pb-12 max-md:pt-12 max-md:pb-8">
+    <h1 class="text-[clamp(2.5rem,10vw,5rem)] leading-[0.98] font-extrabold tracking-[-0.04em]">What I use</h1>
+    <p class="mt-5 text-xl text-muted">Here's what helps me do my day-to-day.</p>
+</x-row>
 
-<p class="lg:mb-8">Here's what helps me do my day-to-day.</p>
-
-<div class="flow-root py-3">
+<x-row>
     <x-uses-section heading="Workstations">
         <h5>13-inch, M1, 2020 MacBook Pro</h5>
         <p>
@@ -83,5 +84,5 @@ description: Get in touch with us
             <h6 class="mb-0">BenQ ScreenBar Halo</h6>
         </div>
     </x-uses-section>
-</div>
+</x-row>
 @stop

@@ -1,0 +1,3 @@
+[run]
+# Run package scripts with the Bun runtime. Homebrew Node 26 loads yargs/yargs as ESM and breaks Laravel Mix.
+bun = true

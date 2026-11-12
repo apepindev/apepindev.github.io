@@ -1,25 +1,32 @@
 @extends('_layouts.main')
 
-@php $color = 'category-' . ($page->color ?? 'primary') @endphp
-
 @section('body')
-{{--    <h1 class="{{ $color }} text-3xl category inline-block tracking-normal uppercase font-semibold rounded-lg px-5 py-1.5">--}}
-{{--        {{ $page->title }}--}}
-{{--    </h1>--}}
+    @php $categoryPosts = $page->posts($posts) @endphp
 
-    <h1 class="text-4xl break-words hyphens-auto">Posts tagged with "{{ $page->title }}"</h1>
+    <x-row :first="true" class="px-16 px-sheet pt-20 pb-12 max-md:pt-12 max-md:pb-8">
+        <a href="/posts" class="btn-link hl-hover font-mono !font-normal text-xs">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            All posts
+        </a>
 
-    <div class="text-xl mb-6 pb-10">
-        @yield('content')
-    </div>
+        <h1 class="mt-7 text-[clamp(2.5rem,10vw,5rem)] leading-[0.98] font-extrabold tracking-[-0.04em] break-words hyphens-auto">{{ $page->title }}</h1>
 
-    @foreach ($page->posts($posts) as $post)
-        @include('_components.post-preview-inline')
+        <div class="prose mt-5 text-xl">
+            @yield('content')
+        </div>
 
-        @if (! $loop->last)
-            <hr class="w-full border-b mt-2 mb-6">
+        <p class="label mt-2">{{ $categoryPosts->count() }} {{ $categoryPosts->count() === 1 ? 'post' : 'posts' }}</p>
+    </x-row>
+
+    <x-row>
+        @if ($categoryPosts->count())
+            @include('_components.schedule-head')
+
+            @foreach ($categoryPosts as $post)
+                @include('_components.post-row')
+            @endforeach
+        @else
+            <p class="px-16 px-sheet py-10 text-muted">No posts in this category yet. <a href="/posts" class="underline underline-offset-4">See all posts</a>.</p>
         @endif
-    @endforeach
-
-{{--    @include('_components.newsletter-signup')--}}
+    </x-row>
 @stop
