@@ -17,12 +17,10 @@
         <link href="/rss/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
         <link rel="preload" href="/assets/fonts/FiraCodeNerdFont-Regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link rel="preload" href="/assets/fonts/SchibstedGrotesk-Latin.woff2" as="font" type="font/woff2" crossorigin>
 
         @if ($page->production)
-            <!-- Insert analytics code here -->
+            <script src="https://steadyer.app/beacon.js" data-beacon-key="lNCoL9KeTG6xq5Q4AS6lmqMvGjYVd7lY" async></script>
         @endif
 
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
@@ -34,8 +32,6 @@
                 document.querySelector('html').classList.remove('dark');
             }
         </script>
-
-        <script src="https://steadyer.app/beacon.js" data-beacon-key="lNCoL9KeTG6xq5Q4AS6lmqMvGjYVd7lY" async></script>
     </head>
 
     <!-- steadyer-test-marker -->

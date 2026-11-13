@@ -10,7 +10,7 @@ cover_credit: Tighten
 featured: false
 categories:
   - personal
-published: true
+published: false
 share: true
 ---
 

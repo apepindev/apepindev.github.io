@@ -13,6 +13,8 @@
                 <p class="text-xl leading-normal text-muted max-w-[36ch]">Senior Software Engineer and now SRE at Kamma. This is where I write down what I learn from work and side projects.</p>
                 <ul class="flex flex-wrap gap-2 font-mono text-xs">
                     <li class="border border-ink px-2.5 py-1.5"><span class="hl">PHP / Laravel</span></li>
+                    <li class="border border-dashed border-ink px-2.5 py-1.5 text-muted">Docker</li>
+                    <li class="border border-dashed border-ink px-2.5 py-1.5 text-muted">K8s</li>
                     <li class="border border-dashed border-ink px-2.5 py-1.5 text-muted">Python</li>
                     <li class="border border-dashed border-ink px-2.5 py-1.5 text-muted">Node.js</li>
                 </ul>
