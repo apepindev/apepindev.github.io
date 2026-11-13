@@ -4,15 +4,8 @@ return [
     'baseUrl' => 'https://apepin.dev',
     'production' => true,
 
-    // Collections
-    'collections' => [
-        'posts' => [
-            'filter' => function ($item) {
-                return $item->published;
-            },
-        ],
-        'categories' => [
-            //
-        ],
-    ],
+    // The live site shows published posts only. The posts filter in config.php reads these.
+    'showPublished' => true,
+    'showDrafts' => false,
+    'showJigsaw' => false,
 ];

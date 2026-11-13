@@ -14,16 +14,28 @@ return [
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'siteAuthor' => 'Andrew',
 
+    // Which posts the build includes. Jigsaw posts are the starter template's examples in
+    // source/_posts/jigsaw. Published posts set `published: true`. Every other post is a draft.
+    // config.production.php overrides these for the live site.
+    'showPublished' => true,
+    'showDrafts' => false,
+    'showJigsaw' => false,
+
     // collections
     'merge_collection_configs' => true,
     'collections' => [
         'posts' => [
             'author' => 'Andrew', // Default author, if not provided in a post
-            'sort' => '-date',
+            // Newest first. Posts on the same date fall back to the filename's
+            // number prefix, so 02-*.md sits after (newer than) 01-*.md.
+            'sort' => ['-date', '-filename'],
             'path' => 'posts/{-title}',
             'filter' => function ($item) {
-//                return $item->getRelativePath() !== 'jigsaw';
-                return $item;
+                if (Str::startsWith($item->getRelativePath(), 'jigsaw')) {
+                    return (bool) $item->showJigsaw;
+                }
+
+                return (bool) ($item->published ? $item->showPublished : $item->showDrafts);
             },
         ],
         'categories' => [
