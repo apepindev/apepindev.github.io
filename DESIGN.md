@@ -11,7 +11,8 @@ colors:
   reg: "#6B7380"
   hatch: "#C3C9D1"
   highlighter: "#D9F24A"
-  code-bg: "#282A36"
+  code-bg: "#1A1E23"
+  dark-code-bg: "#0B0C0E"
   code-ink: "#EFF0EB"
   dark-paper: "#121417"
   dark-margin: "#0B0C0E"
@@ -116,7 +117,7 @@ None. The sheet is flat. Depth comes from rules, dashed frames and the dotted ma
 - Icon button (`.icon-btn`): 44px square, dashed ink border, fills with highlighter on hover. Used for search, theme switch, menu and pagination.
 - Tag (`.tag`): dashed border, 11px mono text.
 - Frame (`.frame` + `.dimension`): dashed box with a measured dimension line above and a `FIG. n` caption below (`.fig-caption`).
-- Code block: dark panel in both themes with a 1px border, FiraCode Nerd Font, Snazzy colours (`source/_assets/css/snazzy.css`) on #282A36.
+- Code block: dark panel in both themes with a 1px border, FiraCode Nerd Font, Snazzy colours (`source/_assets/css/snazzy.css`) on #1A1E23 (light mode) or #0B0C0E (dark mode). A Copy button from `main.js` sits top right and fills with highlighter on hover.
 - Title block footer (`.title-block`): 4 by 2 grid of label and value cells.
 
 ## Do's and Don'ts

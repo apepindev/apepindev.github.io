@@ -26,25 +26,31 @@ description: The hardware and software Andrew uses day to day
     </x-uses-section>
 
     <x-uses-section heading="Development software">
-        <h5><a href="https://www.jetbrains.com/">JetBrains IDEs</a></h5>
+        <h5><a class="btn-link hl-hover" href="https://www.jetbrains.com/">JetBrains IDEs</a></h5>
         <p>
             My go-to IDE is anything by JetBrains. They all come pre-packed with tons of features
-            that just make my life easier. Currently I'm using PhpStorm and PyCharm.
+            that just make my life easier. Currently I'm using PhpStorm, PyCharm, GoLand and DataGrip.
         </p>
 
-        <h5><a href="https://iterm2.com/">iTerm2</a></h5>
+        <h5><a class="btn-link hl-hover" href="https://zed.dev/">Zed</a></h5>
+        <p>
+            When I just need a fast text editor rather than a feature rich IDE for scripts and small
+            projects.
+        </p>
+
+        <h5><a class="btn-link hl-hover" href="https://ghostty.org/">Ghostty</a>/<a class="btn-link hl-hover" href="https://cmux.com/">cmux</a></h5>
         <p>
             Pretty sure this is a common terminal alternative everyone uses on MacOS. The shell I
-            use is ZSH (<a href="https://ohmyz.sh/">Oh My Zsh</a>) with <a href="https://github.com/romkatv/powerlevel10k">Powerlevel10k</a>.
+            use is a custom, lightweight variant of (<a class="btn-link hl-hover" href="https://ohmyz.sh/">Oh My Zsh</a>).
         </p>
 
-        <h5><a href="https://orbstack.dev/">OrbStack</a></h5>
+        <h5><a class="btn-link hl-hover" href="https://orbstack.dev/">OrbStack</a></h5>
         <p>
             A drop-in replacement to Docker for Mac, and a snappy one too. Works really well x86
             emulation and requires less resources.
         </p>
 
-        <h5><a href="https://github.com/usebruno/bruno">Bruno</a></h5>
+        <h5><a class="btn-link hl-hover" href="https://github.com/usebruno/bruno">Bruno</a></h5>
         <p class="mb-0">
             The only "offline" API client with Git collaboration in mind. It's fairly new to the
             scene but it has already gained a lot of attention and works great.
@@ -52,29 +58,23 @@ description: The hardware and software Andrew uses day to day
     </x-uses-section>
 
     <x-uses-section heading="Other software">
-        <h5><a href="https://arc.net/">Arc</a></h5>
+        <h5><a class="btn-link hl-hover" href="https://zen-browser.app/">Zen</a></h5>
         <p>
-            Just recently made the switch from Brave and I'm really impressed with it. Comes with
-            some nice features for development too.
+            Just recently made the switch from Arc (RIP) and I'm really impressed with it. It was
+            quite a shift from a Chromium browser to a Firefox one but it's working great for me.
         </p>
 
-        <h5><a href="https://zed.dev/">Zed</a></h5>
-        <p>
-            From the creators of the Atom, they created a text editor that rivals Sublime Text,
-            which is very impressive!
-        </p>
-
-        <h5><a href="https://boop.okat.best/">Boop</a></h5>
+        <h5><a class="btn-link hl-hover" href="https://boop.okat.best/">Boop</a></h5>
         <p class="mb-0">
-            A neat text manipulation tool that already comes with an array of useful scripts. You
-            can also create your own scripts too.
+            A neat text manipulation tool that already comes with an array of useful scripts. Really
+            handy when I just need to do quick formatting.
         </p>
     </x-uses-section>
 
     <x-uses-section heading="Peripherals">
         <div class="leading-tight">
             <h6>Gigabyte M28U Monitor</h6>
-            <h6>Keychron V1 QMK Keyboard</h6>
+            <h6>Keychron Q1 HE Keyboard</h6>
             <h6>Apple Magic Trackpad</h6>
             <h6>Deltahub Carpio 2.0 & G2.0</h6>
             <h6>Elgato Stream Deck XL</h6>

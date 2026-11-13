@@ -18,6 +18,35 @@ document.querySelectorAll('pre code').forEach((block) => {
     hljs.highlightBlock(block);
 });
 
+// Copy buttons. The wrapper keeps the button in place while the pre scrolls sideways.
+document.querySelectorAll('pre > code').forEach((code) => {
+    const pre = code.parentElement;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-block';
+    if (pre.classList.contains('flex-1')) {
+        wrapper.classList.add('code-block-fill');
+    }
+    pre.parentNode.insertBefore(wrapper, pre);
+    wrapper.appendChild(pre);
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'copy-btn';
+    button.textContent = 'Copy';
+    button.setAttribute('aria-label', 'Copy code to clipboard');
+    wrapper.appendChild(button);
+
+    let reset;
+    button.addEventListener('click', () => {
+        navigator.clipboard.writeText(code.innerText).then(
+            () => { button.textContent = 'Copied'; },
+            () => { button.textContent = 'Failed'; },
+        );
+        clearTimeout(reset);
+        reset = setTimeout(() => { button.textContent = 'Copy'; }, 2000);
+    });
+});
+
 Vue.config.productionTip = false;
 
 new Vue({

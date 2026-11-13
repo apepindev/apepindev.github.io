@@ -2,8 +2,8 @@
  * Snazzy highlight.js theme.
  * Colours from https://github.com/sindresorhus/hyper-snazzy (the palette behind terminal-snazzy).
  * The panel background, text and border come from --code-* in base.css.
- * Comments use the Snazzy cursor grey #97979b: 4.6:1 on #282a36. The palette's
- * #686868 bright black measures 2.9:1 and is too faint for reading.
+ * Comments use the Snazzy cursor grey #97979b: 5.9:1 on the #1a1e23 panel. The
+ * palette's #686868 bright black is too faint for reading.
  */
 
 .hljs {

@@ -526,3 +526,384 @@
         height: 2.5rem;
     }
 }
+
+/*
+ * Isometric desk item on the home page (source/_components/desk.blade.php).
+ * Units are cqw of the .desk container. The stage tilts the ground plane into an
+ * isometric view, so local +y points south-west on screen. One item shows at a time,
+ * sized with the scale property, which leaves transform free for click animations.
+ */
+
+.desk {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    overflow: hidden;
+    container-type: size;
+    --stroke: 1.5px solid var(--ink);
+    --hatch-fill: repeating-linear-gradient(45deg, var(--rule) 0 1px, var(--paper) 1px 4px);
+}
+
+.desk-stage {
+    position: absolute;
+    left: 50%;
+    top: var(--stage-top, 60%);
+    transform-style: preserve-3d;
+    scale: 1.25 1.25 1.25;
+    transform: rotateX(54.7356deg) rotateZ(45deg);
+
+    & span {
+        position: absolute;
+        display: block;
+        box-sizing: border-box;
+        transform-style: preserve-3d;
+    }
+}
+
+.desk-ground {
+    left: -26cqw;
+    top: -26cqw;
+    width: 52cqw;
+    height: 52cqw;
+    border: 1px dashed var(--rule);
+    background:
+        repeating-linear-gradient(90deg, transparent 0 calc(6cqw - 1px), var(--rule-soft) calc(6cqw - 1px) 6cqw),
+        repeating-linear-gradient(0deg, transparent 0 calc(6cqw - 1px), var(--rule-soft) calc(6cqw - 1px) 6cqw);
+}
+
+.desk-stage .desk-item {
+    display: none;
+    scale: var(--size) var(--size) var(--size);
+}
+
+.desk[data-show="laptop"] { --stage-top: 64%; }
+.desk[data-show="cup"] { --stage-top: 62%; }
+.desk[data-show="glasses"] { --stage-top: 61%; }
+
+.desk[data-show="laptop"] .desk-laptop,
+.desk[data-show="cup"] .desk-cup,
+.desk[data-show="glasses"] .desk-glasses {
+    display: block;
+}
+
+.desk-laptop { --size: 1.25; }
+.desk-cup { --size: 2; }
+.desk-glasses {
+    --size: 1.8;
+    /* The temples reach 15cqw behind the frame, so move the item forward to centre it. */
+    translate: 0 7cqw;
+}
+
+/* Box: footprint w by d on the ground, height h, raised by z */
+
+.desk-stage .box {
+    left: calc(var(--x) * 1cqw);
+    top: calc(var(--y) * 1cqw);
+    width: calc(var(--w) * 1cqw);
+    height: calc(var(--d) * 1cqw);
+    transform: translateZ(calc(var(--z) * 1cqw));
+}
+
+.desk-stage .box > .f {
+    border: var(--stroke);
+    background: var(--paper);
+}
+
+.desk-stage .box > .f-top {
+    inset: 0;
+    transform: translateZ(calc(var(--h) * 1cqw));
+}
+
+.desk-stage .box > .f-front,
+.desk-stage .box > .f-back {
+    left: 0;
+    width: 100%;
+    height: calc(var(--h) * 1cqw);
+    transform-origin: 50% 0;
+    transform: rotateX(90deg);
+    background: var(--hatch-fill);
+}
+
+.desk-stage .box > .f-front { top: 100%; }
+.desk-stage .box > .f-back { top: 0; }
+
+.desk-stage .box > .f-left,
+.desk-stage .box > .f-right {
+    top: 0;
+    width: calc(var(--h) * 1cqw);
+    height: 100%;
+    transform-origin: 0 50%;
+    transform: rotateY(-90deg);
+    background: var(--margin);
+}
+
+.desk-stage .box > .f-left { left: 0; }
+.desk-stage .box > .f-right { left: 100%; }
+
+.desk-stage .box-solid > .f {
+    background: var(--ink);
+}
+
+/* Laptop: 30 by 20 base, lid hinged at the back edge and opened to 105 degrees */
+
+.desk-laptop-keys {
+    inset: 1.6cqw 2.2cqw 7.4cqw;
+    border: 1px solid var(--reg);
+    background:
+        repeating-linear-gradient(90deg, transparent 0 calc(100% / 13 - 1px), var(--rule) calc(100% / 13 - 1px) calc(100% / 13)),
+        repeating-linear-gradient(0deg, transparent 0 calc(100% / 5 - 1px), var(--rule) calc(100% / 5 - 1px) calc(100% / 5));
+}
+
+.desk-laptop-pad {
+    left: 10.5cqw;
+    right: 10.5cqw;
+    bottom: 1.3cqw;
+    height: 4.6cqw;
+    border: 1px solid var(--reg);
+}
+
+.desk-laptop-hinge {
+    left: -15cqw;
+    top: -10cqw;
+    width: 30cqw;
+    height: 0;
+    transform-origin: 0 0;
+    transform: translateZ(1.2cqw) rotateX(-75deg);
+}
+
+.desk:focus-visible {
+    outline: 1px solid var(--ink);
+    outline-offset: -6px;
+}
+
+.desk-laptop-screen {
+    inset: 1.2cqw;
+    border: 1px solid var(--reg);
+    overflow: hidden;
+}
+
+.desk-laptop-scroll {
+    left: 1.8cqw;
+    right: 1.8cqw;
+    top: 1.6cqw;
+    animation: desk-scroll 6s linear infinite paused;
+}
+
+.desk-laptop-lines {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.1cqw;
+    padding-bottom: 1.1cqw;
+
+    & i {
+        display: block;
+        height: 0.5cqw;
+        width: var(--len);
+        margin-left: var(--indent, 0);
+        background: var(--rule);
+    }
+}
+
+/* Cup: saucer, a 20 sided cylinder, coffee and a handle */
+
+.desk-saucer {
+    left: -9.5cqw;
+    top: -9.5cqw;
+    width: 19cqw;
+    height: 19cqw;
+    border: var(--stroke);
+    border-radius: 50%;
+    background: var(--paper);
+    transform: translateZ(var(--lift, 0));
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 3cqw;
+        border: 1px solid var(--rule);
+        border-radius: 50%;
+    }
+}
+
+.desk-saucer-top {
+    --lift: 0.7cqw;
+}
+
+.desk-cup-side {
+    left: -1cqw;
+    top: 0;
+    width: 2cqw;
+    height: 8cqw;
+    border-top: var(--stroke);
+    border-bottom: var(--stroke);
+    background: var(--paper);
+    transform-origin: 50% 0;
+    transform: translateZ(0.7cqw) rotateZ(calc(var(--i) * 18deg)) translateY(6cqw) rotateX(90deg);
+}
+
+.desk-cup-outline {
+    left: -6cqw;
+    top: 0;
+    width: 12cqw;
+    height: 8cqw;
+    border-left: var(--stroke);
+    border-right: var(--stroke);
+    transform-origin: 50% 0;
+    transform: translateZ(0.7cqw) rotateZ(-45deg) rotateX(90deg);
+}
+
+.desk-cup-rim,
+.desk-cup-coffee {
+    left: -6cqw;
+    top: -6cqw;
+    width: 12cqw;
+    height: 12cqw;
+    border-radius: 50%;
+}
+
+.desk-cup-rim {
+    border: var(--stroke);
+    transform: translateZ(8.7cqw);
+}
+
+.desk-cup-coffee {
+    border: 1px solid var(--reg);
+    background: var(--hatch-fill);
+    scale: 0.88;
+    transform: translateZ(7.6cqw);
+}
+
+.desk-cup-handle {
+    left: 4.6cqw;
+    top: -2.6cqw;
+    width: 5.2cqw;
+    height: 5.2cqw;
+    border: 1.1cqw solid var(--ink);
+    border-radius: 50%;
+    transform: translateZ(5cqw) rotateX(90deg);
+}
+
+/* Glasses: standing open, two frame planes for thickness, temples folded out behind */
+
+.desk-glasses-front {
+    left: -11cqw;
+    top: calc(var(--offset) - 7.5cqw);
+    width: 22cqw;
+    height: 7.5cqw;
+    transform-origin: 50% 100%;
+    transform: rotateX(-90deg);
+}
+
+.desk-glasses-lens {
+    top: 0;
+    width: 9.8cqw;
+    height: 7.5cqw;
+    border: 1.2cqw solid var(--ink);
+    border-radius: 22% 22% 42% 42% / 30% 30% 60% 60%;
+}
+
+.desk-glasses-lens-l { left: 0; }
+.desk-glasses-lens-r { right: 0; }
+
+.desk-glasses-bridge {
+    left: 9cqw;
+    right: 9cqw;
+    top: 1.2cqw;
+    height: 1.1cqw;
+    background: var(--ink);
+}
+
+/*
+ * Click loops. The button's aria-pressed state runs them. The code scroll pauses in
+ * place; steam and sheen only exist while running. Reduced motion turns them all off.
+ */
+
+.desk[aria-pressed="true"] .desk-laptop-scroll {
+    animation-play-state: running;
+}
+
+@keyframes desk-scroll {
+    to { transform: translateY(-50%); }
+}
+
+.desk-cup-steam {
+    left: -6cqw;
+    top: -14cqw;
+    width: 12cqw;
+    height: 14cqw;
+    transform-origin: 50% 100%;
+    transform: translateZ(8.7cqw) rotateZ(-45deg) rotateX(-90deg);
+
+    & svg {
+        position: absolute;
+        bottom: 0;
+        left: var(--left);
+        width: 2.4cqw;
+        height: 11cqw;
+        translate: -50% 0;
+        overflow: visible;
+        opacity: 0;
+        fill: none;
+        stroke: var(--reg);
+        stroke-width: 1.2;
+        stroke-linecap: round;
+    }
+}
+
+.desk[aria-pressed="true"] .desk-cup-steam svg {
+    animation: desk-steam 2.7s ease-out var(--delay) infinite;
+}
+
+@keyframes desk-steam {
+    0% { opacity: 0; transform: translateY(15%) scaleY(0.7); }
+    30% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-35%) scaleY(1.1); }
+}
+
+.desk-glasses-front-near .desk-glasses-lens {
+    /* A flat lens lets overflow clip the sheen. In 3D the sheen does not render. */
+    transform-style: flat;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -20%;
+        bottom: -20%;
+        left: 0;
+        width: 1.6cqw;
+        border-left: 2px solid var(--ink);
+        border-right: 1px solid var(--ink);
+        transform: translateX(-250%) skewX(-24deg);
+    }
+}
+
+.desk[aria-pressed="true"] .desk-glasses-front-near .desk-glasses-lens::after {
+    animation: desk-sheen 2.6s ease-in-out infinite;
+}
+
+.desk[aria-pressed="true"] .desk-glasses-front-near .desk-glasses-lens-r::after {
+    animation-delay: 0.18s;
+}
+
+@keyframes desk-sheen {
+    0% { transform: translateX(-250%) skewX(-24deg); }
+    45%, 100% { transform: translateX(600%) skewX(-24deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .desk {
+        cursor: default;
+    }
+
+    .desk[aria-pressed="true"] * {
+        animation: none !important;
+    }
+}

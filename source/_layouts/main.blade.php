@@ -40,7 +40,7 @@
         THESIS: The blog is a technical drawing of one engineer's work. A sheet between two rails, crosshair marks, a post schedule and a title block replace the generic hero-plus-cards template.
         OWN-WORLD: White sheet #FFFFFF on a dotted margin, ink #111418, dashed secondary rules, hatched bands, lime highlighter #D9F24A. Schibsted Grotesk for text, FiraCode Nerd Font for labels, dates and code. Dark mode swaps the same variables.
         STORY: Readers see who Andrew is and his stack, open the latest post, scan the schedule, and find the tools he uses.
-        FIRST VIEWPORT: Header row with the // apepin.dev mark, nav, search and theme switch. Large "Hi, I'm Andrew." left, memoji in a measured dashed frame right.
+        FIRST VIEWPORT: Header row with the // apepin.dev mark, nav, search and theme switch. Large "Hi, I'm Andrew." left, isometric CSS drawing of a desk (laptop, cup, glasses) in a measured dashed frame right.
         FORM: Prototype A (drafting sheet) with prototype C's colour and type, chosen by the user on 2026-11-12. Seed key: none, the brief pinned the world.
         FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
         -->

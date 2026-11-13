@@ -99,9 +99,9 @@
     /* Highlighter band: the lower 40% of the line box, like a marker stroke. */
     --hl-from: 52%;
     --hl-to: 92%;
-    /* Snazzy panel, the same in light and dark mode. */
-    --code-bg: #282A36;
-    --code-rule: #3A3C4A;
+    /* Code panel: a cool slate lifted from ink, so it reads as part of the sheet. */
+    --code-bg: #1A1E23;
+    --code-rule: #2E343C;
     --code-ink: #EFF0EB;
     --code-faint: #97979B;
     color-scheme: light;
@@ -121,6 +121,9 @@
     /* On a dark ground the band sits under the text so light text keeps its contrast. */
     --hl-from: 84%;
     --hl-to: 98%;
+    /* In dark mode the panel drops to the margin colour, a well below the paper. */
+    --code-bg: #0B0C0E;
+    --code-rule: #262B32;
     color-scheme: dark;
 }
 
@@ -326,6 +329,64 @@ pre {
     ::selection {
         background: rgba(151, 151, 155, 0.3);
         color: #FFFFFF;
+    }
+}
+
+/* Code block wrapper from main.js: holds the copy button outside the scrolling pre. */
+.code-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    & > pre {
+        flex: 1;
+        margin: 0;
+    }
+}
+
+/* On the home page the block fills the figure's height. */
+.code-block-fill {
+    flex: 1;
+    margin: 0;
+}
+
+.copy-btn {
+    @apply font-mono;
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--code-faint);
+    background: var(--code-bg);
+    border: 1px dashed var(--code-faint);
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+        color: #111418;
+        background: var(--hl);
+        border-color: var(--hl);
+    }
+
+    &:focus-visible {
+        outline: 1px solid var(--code-ink);
+        outline-offset: 2px;
+    }
+}
+
+/* With a mouse the button shows on hover, so it does not sit over the first line. */
+@media (hover: hover) {
+    .copy-btn {
+        opacity: 0;
+    }
+
+    .code-block:hover .copy-btn,
+    .copy-btn:focus-visible {
+        opacity: 1;
     }
 }
 

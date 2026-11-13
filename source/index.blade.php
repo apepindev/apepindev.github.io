@@ -23,9 +23,9 @@
             <figure class="mt-6 md:mt-0 max-w-[18.75rem]">
                 <div class="frame aspect-square grid place-items-center">
                     <span class="dimension" aria-hidden="true"><span>300</span></span>
-                    <img src="/assets/img/memoji.png" alt="Andrew's memoji" class="w-[78%] h-auto">
+                    <x-desk />
                 </div>
-                <figcaption class="fig-caption"><span>FIG. 1</span><span>memoji.png</span></figcaption>
+                <figcaption class="fig-caption"><span>FIG. 1</span><span>desk, isometric</span></figcaption>
             </figure>
         </section>
     </x-row>
@@ -99,16 +99,14 @@
                 <p class="label mb-4">Development</p>
                 <ul class="space-y-2 font-bold">
                     <li>JetBrains IDEs</li>
-                    <li>iTerm2</li>
-                    <li>OrbStack</li>
-                    <li>Bruno</li>
+                    <li>Ghostty/cmux</li>
+                    <li>Zed</li>
                 </ul>
             </div>
             <div>
                 <p class="label mb-4">Other software</p>
                 <ul class="space-y-2 font-bold">
-                    <li>Arc</li>
-                    <li>Zed</li>
+                    <li>Zen</li>
                     <li>Boop</li>
                 </ul>
             </div>
