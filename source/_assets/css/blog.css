@@ -305,13 +305,15 @@
         margin: 2rem 0;
         padding: 1.25rem 1.5rem;
         border: 1px dashed var(--rule);
-        color: var(--ink);
+        color: var(--muted);
 
         & p {
             margin: 0;
+            color: var(--faint);
             font-size: 1.25rem;
             line-height: 1.45;
-            font-weight: 600;
+            font-weight: 400;
+            font-style: italic;
         }
     }
 
