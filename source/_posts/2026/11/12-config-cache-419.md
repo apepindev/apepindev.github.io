@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "php artisan config:cache outranks phpunit.xml, so tests silently ran on Postgres with CSRF switched on."
 featured: false
 categories:
-  - laravel configuration
+  - laravel
+  - configuration
 published: false
 share: true
 ---

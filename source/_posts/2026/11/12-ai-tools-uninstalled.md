@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "OpenWolf crashed on macOS's file limit and beads took over my git hooks. Serena stayed."
 featured: false
 categories:
-  - personal configuration
+  - personal
+  - configuration
 published: false
 share: true
 ---

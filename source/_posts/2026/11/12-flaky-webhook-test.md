@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "A test that passed locally and failed in CI turned out to have a second consumer on its Redis queue."
 featured: false
 categories:
-  - laravel php
+  - laravel
+  - php
 published: false
 share: true
 ---

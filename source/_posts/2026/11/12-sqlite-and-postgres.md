@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "The first Postgres run of a suite that passed on SQLite found 9 failures. Here is what they were."
 featured: false
 categories:
-  - laravel php
+  - laravel
+  - php
 published: false
 share: true
 ---

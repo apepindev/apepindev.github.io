@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "Client reports needed modern CSS. Gotenberg renders HTML in headless Chromium, with no URL fetching."
 featured: false
 categories:
-  - laravel php
+  - laravel
+  - php
 published: false
 share: true
 ---

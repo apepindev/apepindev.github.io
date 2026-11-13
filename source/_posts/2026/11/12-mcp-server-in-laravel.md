@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "A plan for a separate Python MCP server became three read-only tools on laravel/mcp, sharing the API's auth."
 featured: false
 categories:
-  - laravel feature
+  - laravel
+  - feature
 published: false
 share: true
 ---

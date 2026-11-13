@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "A screenshot diff became one more signal on an existing regression, so dashboards, reports and webhooks needed no changes."
 featured: false
 categories:
-  - feature laravel
+  - feature
+  - laravel
 published: false
 share: true
 ---

@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "Uptime checks and webhooks fetch URLs that customers type. A Guzzle middleware blocks private addresses and pins DNS."
 featured: false
 categories:
-  - laravel php
+  - laravel
+  - php
 published: false
 share: true
 ---

@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "Privacy policy and terms live as dated Markdown files with front matter variables, frozen once published."
 featured: false
 categories:
-  - laravel feature
+  - laravel
+  - feature
 published: false
 share: true
 ---

@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "Pest arch() tests keep domain code away from controllers. Existing violations sit in a list that may only get shorter."
 featured: false
 categories:
-  - laravel php
+  - laravel
+  - php
 published: false
 share: true
 ---

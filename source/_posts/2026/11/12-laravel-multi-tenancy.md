@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "Tenant models carry a global scope. Child models reach the tenant through their parent, and that is where leaks hide."
 featured: false
 categories:
-  - laravel php
+  - laravel
+  - php
 published: false
 share: true
 ---

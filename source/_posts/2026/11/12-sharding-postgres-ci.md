@@ -7,7 +7,8 @@ date: 2026-11-12
 description: "Splitting the Postgres test job across 3 GitHub Actions runners with 4 processes each, balanced by time."
 featured: false
 categories:
-  - laravel configuration
+  - laravel
+  - configuration
 published: false
 share: true
 ---
