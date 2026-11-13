@@ -60,6 +60,9 @@
             @include('_nav.menu-responsive')
         </header>
 
+        {{-- Fades the page under the mobile menu or search. A tap on it closes both. --}}
+        <div class="nav-scrim" aria-hidden="true" onclick="window.dispatchEvent(new CustomEvent('nav:close'))"></div>
+
         <div class="hatch" aria-hidden="true"></div>
 
         <main role="main" class="flex-auto">

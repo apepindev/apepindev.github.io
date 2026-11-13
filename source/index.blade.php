@@ -20,7 +20,7 @@
                 </ul>
             </div>
 
-            <figure class="mt-6 md:mt-0 max-w-[18.75rem]">
+            <figure class="hidden mt-6 md:mt-0 max-w-[18.75rem] md:block">
                 <div class="frame aspect-square grid place-items-center">
                     <span class="dimension" aria-hidden="true"><span>300</span></span>
                     <x-desk />

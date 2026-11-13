@@ -9,17 +9,37 @@
 
 @push('scripts')
 <script>
+    // Menu and search share two window events so only one is open at a time:
+    // 'nav:open' (detail names who opened) closes the other, 'nav:close' closes both.
     const navMenu = {
-        toggle() {
-            const menu = document.getElementById('js-nav-menu');
+        isOpen() {
+            return !document.getElementById('js-nav-menu').classList.contains('hidden');
+        },
+        set(open) {
             const button = document.getElementById('menu-toggle');
-            const open = menu.classList.toggle('hidden') === false;
 
+            document.getElementById('js-nav-menu').classList.toggle('hidden', !open);
             document.getElementById('js-nav-menu-hide').classList.toggle('hidden', !open);
             document.getElementById('js-nav-menu-show').classList.toggle('hidden', open);
+            document.documentElement.classList.toggle('menu-open', open);
             button.setAttribute('aria-expanded', open ? 'true' : 'false');
             button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
         },
+        toggle() {
+            const open = !this.isOpen();
+            this.set(open);
+            if (open) {
+                window.dispatchEvent(new CustomEvent('nav:open', { detail: 'menu' }));
+            }
+        },
     }
+
+    window.addEventListener('nav:open', (event) => {
+        if (event.detail !== 'menu') navMenu.set(false);
+    });
+    window.addEventListener('nav:close', () => navMenu.set(false));
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navMenu.isOpen()) navMenu.set(false);
+    });
 </script>
 @endpush

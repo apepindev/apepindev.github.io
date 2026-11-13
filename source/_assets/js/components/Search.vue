@@ -5,6 +5,7 @@
       class="icon-btn"
       aria-label="Search posts"
       :aria-expanded="searching ? 'true' : 'false'"
+      @mousedown.prevent
       @click="searching ? close() : showInput()"
     >
       <svg v-if="!searching" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
@@ -73,6 +74,14 @@ export default {
       return this.query && this.fuse ? this.fuse.search(this.query) : [];
     },
   },
+  watch: {
+    searching(open) {
+      document.documentElement.classList.toggle('search-open', open);
+      if (open) {
+        window.dispatchEvent(new CustomEvent('nav:open', { detail: 'search' }));
+      }
+    },
+  },
   methods: {
     showInput() {
       this.searching = true;
@@ -92,6 +101,9 @@ export default {
         this.showInput();
       }
     },
+    onNavOpen(event) {
+      if (event.detail !== 'search') this.close();
+    },
   },
   created() {
     axios('/index.json').then(response => {
@@ -103,9 +115,13 @@ export default {
   },
   mounted() {
     document.addEventListener('keydown', this.onKeydown);
+    window.addEventListener('nav:open', this.onNavOpen);
+    window.addEventListener('nav:close', this.close);
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.onKeydown);
+    window.removeEventListener('nav:open', this.onNavOpen);
+    window.removeEventListener('nav:close', this.close);
   },
 };
 </script>

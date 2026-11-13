@@ -42,6 +42,76 @@
     }
 }
 
+/*
+ * Search (all widths) and the menu (below lg) float as cards under the header, and
+ * a scrim fades the page: light paper in light mode, near-black in dark mode. The
+ * header sits above the scrim so its buttons stay usable. menu-open and search-open
+ * are set on <html> by menu-toggle.blade.php and Search.vue.
+ */
+.nav-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 15;
+    background: rgb(244 245 247 / 0.75);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease-out;
+}
+
+.dark .nav-scrim {
+    background: rgb(11 12 14 / 0.7);
+}
+
+html.search-open .nav-scrim {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+header[role="banner"] {
+    position: relative;
+    z-index: 20;
+}
+
+/* The header prefix outranks Search.vue's own .search-panel rule, which loads later. */
+header[role="banner"] .search-panel,
+header[role="banner"] .mobile-menu {
+    position: absolute;
+    inset: calc(100% + 0.5rem) 1rem auto 1rem;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    box-shadow: 0 12px 32px rgb(0 0 0 / 0.18);
+}
+
+.dark header[role="banner"] .search-panel,
+.dark header[role="banner"] .mobile-menu {
+    box-shadow: 0 12px 32px rgb(0 0 0 / 0.5);
+}
+
+.mobile-menu .nav-link:first-child {
+    border-top: 0;
+}
+
+@media (min-width: 1024px) {
+    /* On desktop the search card hangs from the right, under the header buttons. */
+    header[role="banner"] .search-panel {
+        left: auto;
+        right: 4rem;
+        width: 36rem;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    html.menu-open .nav-scrim {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Phones have no esc key to press. */
+    header[role="banner"] .search-field kbd {
+        display: none;
+    }
+}
+
 /* Post schedule: one row per post, used on home, posts and category pages */
 
 .schedule-head,
